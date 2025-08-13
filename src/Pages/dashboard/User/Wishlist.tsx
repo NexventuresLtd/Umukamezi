@@ -44,7 +44,7 @@ const UserWishlist = () => {
               <ProductCard product={product} />
               <button
                 onClick={() => removeFromWishlist(product.id)}
-                className="absolute top-2 right-2 p-2 bg-white rounded-full shadow hover:bg-gray-100"
+                className="absolute top-2 right-2 p-2 bg-white rounded-full  hover:bg-gray-100"
               >
                 <Heart className="h-5 w-5 text-red-500 fill-red-500" />
               </button>
@@ -52,12 +52,12 @@ const UserWishlist = () => {
           ))}
         </div>
       ) : (
-        <div className="bg-white rounded-lg shadow p-8 text-center">
+        <div className="bg-white rounded-lg  p-8 text-center">
           <h3 className="text-lg font-medium text-gray-900 mb-2">Your wishlist is empty</h3>
           <p className="text-gray-600 mb-4">Save items you love for easy access later</p>
           <a
             href="/products"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-yellow-600 hover:bg-yellow-700"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md -sm text-white bg-yellow-600 hover:bg-yellow-700"
           >
             Continue Shopping
           </a>

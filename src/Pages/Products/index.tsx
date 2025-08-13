@@ -64,7 +64,7 @@ const ProductsPage = () => {
 
         <div className="flex flex-col md:flex-row gap-8">
           {/* Filters Sidebar */}
-          <div className="md:w-1/4 bg-white p-6 rounded-lg shadow">
+          <div className="md:w-1/4 bg-white p-6 rounded-lg ">
             <h2 className="text-xl font-semibold mb-4">Filters</h2>
 
             {/* Price Range Filter */}
@@ -167,7 +167,7 @@ const ProductsPage = () => {
           {/* Products List */}
           <div className="md:w-3/4">
             {/* Sorting Options */}
-            <div className="bg-white p-4 rounded-lg shadow mb-6 flex justify-between items-center">
+            <div className="bg-white p-4 rounded-lg  mb-6 flex justify-between items-center">
               <div className="text-gray-600">
                 Showing {priceFilteredProducts.length} of {filteredProducts.length} products
               </div>
@@ -197,7 +197,7 @@ const ProductsPage = () => {
                 ))}
               </div>
             ) : (
-              <div className="bg-white p-8 rounded-lg shadow text-center">
+              <div className="bg-white p-8 rounded-lg  text-center">
                 <h3 className="text-xl font-medium mb-2">No products found</h3>
                 <p className="text-gray-600 mb-4">
                   Try adjusting your filters to find what you're looking for.

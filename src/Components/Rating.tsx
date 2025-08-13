@@ -114,7 +114,7 @@ const Rating = ({
                   filled || hovered
                     ? 'text-yellow-400 fill-yellow-400' 
                     : 'text-gray-300 hover:text-yellow-300'
-                } ${interactive ? 'hover:drop-shadow-lg' : ''}`}
+                } ${interactive ? 'hover:drop--lg' : ''}`}
                 onClick={() => handleStarClick(i + 1)}
                 onMouseEnter={() => handleStarHover(i)}
               />

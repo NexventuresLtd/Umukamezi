@@ -33,7 +33,7 @@ const UserDashboardHome = () => {
       
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <div className="flex items-center">
             <div className="p-3 rounded-full bg-yellow-100 text-yellow-600 mr-4">
               <ShoppingBag size={24} />
@@ -45,7 +45,7 @@ const UserDashboardHome = () => {
           </div>
         </div>
         
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <div className="flex items-center">
             <div className="p-3 rounded-full bg-green-100 text-green-600 mr-4">
               <Heart size={24} />
@@ -57,7 +57,7 @@ const UserDashboardHome = () => {
           </div>
         </div>
         
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <div className="flex items-center">
             <div className="p-3 rounded-full bg-yellow-100 text-yellow-600 mr-4">
               <Star size={24} />
@@ -69,7 +69,7 @@ const UserDashboardHome = () => {
           </div>
         </div>
         
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <div className="flex items-center">
             <div className="p-3 rounded-full bg-gray-100 text-gray-600 mr-4">
               <CreditCard size={24} />
@@ -83,7 +83,7 @@ const UserDashboardHome = () => {
       </div>
 
       {/* Recent Orders */}
-      <div className="bg-white rounded-lg shadow overflow-hidden mb-8">
+      <div className="bg-white rounded-lg  overflow-hidden mb-8">
         <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
           <h2 className="text-lg font-medium text-gray-900">Recent Orders</h2>
           <Link
@@ -126,7 +126,7 @@ const UserDashboardHome = () => {
       </div>
 
       {/* Account Summary */}
-      <div className="bg-white rounded-lg shadow overflow-hidden">
+      <div className="bg-white rounded-lg  overflow-hidden">
         <div className="px-6 py-4 border-b border-gray-200">
           <h2 className="text-lg font-medium text-gray-900">Account Summary</h2>
         </div>

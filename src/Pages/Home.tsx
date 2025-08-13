@@ -36,7 +36,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Discover Amazing Products at <span className="text-yellow-600">Umakamezi</span>
+                Discover Amazing Products at <span className="text-yellow-600">Umukamezi</span>
               </h1>
               <p className="text-lg text-gray-600 mb-6">
                 We offer high-quality yet budget-friendly products with excellent customer service
@@ -52,8 +52,8 @@ const Home = () => {
             <div className="md:w-1/2">
               <img
                 src={HeroImage}
-                alt="Umakamezi Products"
-                className="rounded-lg shadow-xl w-full h-auto"
+                alt="Umukamezi Products"
+                className="rounded-lg -xl w-full h-auto"
               />
             </div>
           </div>

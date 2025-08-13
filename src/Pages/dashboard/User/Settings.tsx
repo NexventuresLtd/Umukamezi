@@ -61,7 +61,7 @@ const UserSettings = () => {
       
       <div className="space-y-8">
         {/* Personal Information */}
-        <div className="bg-white shadow overflow-hidden rounded-lg">
+        <div className="bg-white  overflow-hidden rounded-lg">
           <div className="px-4 py-5 sm:px-6 border-b border-gray-200">
             <h3 className="text-lg leading-6 font-medium text-gray-900">
               Personal Information
@@ -80,7 +80,7 @@ const UserSettings = () => {
                     id="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
+                    className="mt-1 block w-full border border-gray-300 rounded-md -sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
                   />
                 </div>
 
@@ -94,7 +94,7 @@ const UserSettings = () => {
                     id="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
+                    className="mt-1 block w-full border border-gray-300 rounded-md -sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
                   />
                 </div>
 
@@ -108,14 +108,14 @@ const UserSettings = () => {
                     id="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
+                    className="mt-1 block w-full border border-gray-300 rounded-md -sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
                   />
                 </div>
               </div>
               <div className="mt-6">
                 <button
                   type="submit"
-                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                  className="inline-flex justify-center py-2 px-4 border border-transparent -sm text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
                 >
                   Save Changes
                 </button>
@@ -125,7 +125,7 @@ const UserSettings = () => {
         </div>
 
         {/* Password Update */}
-        <div className="bg-white shadow overflow-hidden rounded-lg">
+        <div className="bg-white  overflow-hidden rounded-lg">
           <div className="px-4 py-5 sm:px-6 border-b border-gray-200">
             <h3 className="text-lg leading-6 font-medium text-gray-900">
               Change Password
@@ -144,7 +144,7 @@ const UserSettings = () => {
                     id="currentPassword"
                     value={formData.currentPassword}
                     onChange={handleChange}
-                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
+                    className="mt-1 block w-full border border-gray-300 rounded-md -sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
                   />
                 </div>
 
@@ -158,7 +158,7 @@ const UserSettings = () => {
                     id="newPassword"
                     value={formData.newPassword}
                     onChange={handleChange}
-                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
+                    className="mt-1 block w-full border border-gray-300 rounded-md -sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
                   />
                 </div>
 
@@ -172,14 +172,14 @@ const UserSettings = () => {
                     id="confirmPassword"
                     value={formData.confirmPassword}
                     onChange={handleChange}
-                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
+                    className="mt-1 block w-full border border-gray-300 rounded-md -sm py-2 px-3 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
                   />
                 </div>
               </div>
               <div className="mt-6">
                 <button
                   type="submit"
-                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                  className="inline-flex justify-center py-2 px-4 border border-transparent -sm text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
                 >
                   Update Password
                 </button>
@@ -189,7 +189,7 @@ const UserSettings = () => {
         </div>
 
         {/* Addresses */}
-        <div className="bg-white shadow overflow-hidden rounded-lg">
+        <div className="bg-white  overflow-hidden rounded-lg">
           <div className="px-4 py-5 sm:px-6 border-b border-gray-200">
             <h3 className="text-lg leading-6 font-medium text-gray-900">
               Saved Addresses
@@ -226,7 +226,7 @@ const UserSettings = () => {
                 </div>
               ))}
             </div>
-            <button className="mt-4 inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+            <button className="mt-4 inline-flex items-center px-3 py-2 border border-gray-300 -sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
               Add New Address
             </button>
           </div>

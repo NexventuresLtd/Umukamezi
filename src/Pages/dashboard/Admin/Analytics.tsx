@@ -60,7 +60,7 @@ const AdminAnalytics = () => {
             Year
           </button>
         </div>
-        <button className="inline-flex items-center px-3 py-1 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+        <button className="inline-flex items-center px-3 py-1 border border-gray-300 -sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
           <Download className="h-4 w-4 mr-2" />
           Export
         </button>
@@ -68,27 +68,27 @@ const AdminAnalytics = () => {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <h3 className="text-gray-500 text-sm">Total Sales</h3>
           <p className="text-2xl font-bold">${stats.totalSales.toFixed(2)}</p>
           <p className="text-sm text-green-600 mt-1">+12.5% from last {timeRange}</p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <h3 className="text-gray-500 text-sm">Total Orders</h3>
           <p className="text-2xl font-bold">{stats.totalOrders}</p>
           <p className="text-sm text-green-600 mt-1">+8.3% from last {timeRange}</p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <h3 className="text-gray-500 text-sm">New Customers</h3>
           <p className="text-2xl font-bold">{stats.newCustomers}</p>
           <p className="text-sm text-green-600 mt-1">+5.2% from last {timeRange}</p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <h3 className="text-gray-500 text-sm">Avg. Order Value</h3>
           <p className="text-2xl font-bold">${stats.avgOrderValue.toFixed(2)}</p>
           <p className="text-sm text-green-600 mt-1">+2.1% from last {timeRange}</p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <h3 className="text-gray-500 text-sm">Conversion Rate</h3>
           <p className="text-2xl font-bold">{stats.conversionRate}%</p>
           <p className="text-sm text-green-600 mt-1">+0.4% from last {timeRange}</p>
@@ -126,7 +126,7 @@ const AdminAnalytics = () => {
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
         {/* Main Chart */}
-        <div className="bg-white p-6 rounded-lg shadow lg:col-span-2">
+        <div className="bg-white p-6 rounded-lg  lg:col-span-2">
           <h2 className="text-lg font-medium text-gray-900 mb-4">
             {chartType === 'sales' && 'Sales Overview'}
             {chartType === 'orders' && 'Orders Overview'}
@@ -143,7 +143,7 @@ const AdminAnalytics = () => {
         </div>
         
         {/* Pie Chart */}
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <h2 className="text-lg font-medium text-gray-900 mb-4">
             {chartType === 'sales' && 'Sales by Category'}
             {chartType === 'orders' && 'Orders by Category'}
@@ -161,7 +161,7 @@ const AdminAnalytics = () => {
       </div>
 
       {/* Top Products */}
-      <div className="bg-white rounded-lg shadow overflow-hidden">
+      <div className="bg-white rounded-lg  overflow-hidden">
         <div className="px-6 py-4 border-b border-gray-200">
           <h2 className="text-lg font-medium text-gray-900">Top Products</h2>
         </div>

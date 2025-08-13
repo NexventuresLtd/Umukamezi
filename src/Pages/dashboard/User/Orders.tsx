@@ -33,7 +33,7 @@ const UserOrders = () => {
       />
       <h1 className="text-2xl font-bold text-gray-900 mb-6">My Orders</h1>
       
-      <div className="bg-white shadow overflow-hidden rounded-lg">
+      <div className="bg-white  overflow-hidden rounded-lg">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">

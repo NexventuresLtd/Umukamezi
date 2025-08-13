@@ -72,7 +72,7 @@ const Login = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
           <div className="animate-fadeInUp">
             {/* Logo placeholder */}
-            <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-6 -lg">
               <span className="text-white font-bold text-2xl">U</span>
             </div>
 
@@ -96,7 +96,7 @@ const Login = () => {
 
         {/* Main Content */}
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-lg">
-          <div className="bg-white py-10 px-6 shadow-2xl sm:rounded-3xl sm:px-12 border border-gray-100">
+          <div className="bg-white py-10 px-6 -2xl sm:rounded-3xl sm:px-12 border border-gray-100">
             {/* Benefits */}
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
@@ -150,7 +150,7 @@ const Login = () => {
                     onBlur={handleBlur}
                     className={`w-full pl-10 pr-4 py-3 border-2 rounded-xl transition-all duration-300 focus:outline-none ${
                       focusedField === 'email'
-                        ? 'border-yellow-500 bg-yellow-50 shadow-lg transform scale-105'
+                        ? 'border-yellow-500 bg-yellow-50 -lg transform scale-105'
                         : 'border-gray-200 hover:border-gray-300'
                     }`}
                     placeholder="Enter your email"
@@ -188,7 +188,7 @@ const Login = () => {
                     onBlur={handleBlur}
                     className={`w-full pl-10 pr-12 py-3 border-2 rounded-xl transition-all duration-300 focus:outline-none ${
                       focusedField === 'password'
-                        ? 'border-yellow-500 bg-yellow-50 shadow-lg transform scale-105'
+                        ? 'border-yellow-500 bg-yellow-50 -lg transform scale-105'
                         : 'border-gray-200 hover:border-gray-300'
                     }`}
                     placeholder="Enter your password"
@@ -241,7 +241,7 @@ const Login = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-xl shadow-lg text-base font-bold text-white bg-gradient-to-r from-yellow-600 to-amber-500 hover:from-yellow-700 hover:to-amber-600 focus:outline-none focus:ring-4 focus:ring-yellow-300 transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-xl -lg text-base font-bold text-white bg-gradient-to-r from-yellow-600 to-amber-500 hover:from-yellow-700 hover:to-amber-600 focus:outline-none focus:ring-4 focus:ring-yellow-300 transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {isLoading ? (
                     <div className="flex items-center space-x-2">
@@ -275,7 +275,7 @@ const Login = () => {
                 {/* Facebook */}
                 <button
                   type="button"
-                  className="group w-full inline-flex justify-center items-center py-3 px-4 border-2 border-gray-200 rounded-xl shadow-sm bg-white text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 transform hover:scale-105"
+                  className="group w-full inline-flex justify-center items-center py-3 px-4 border-2 border-gray-200 rounded-xl -sm bg-white text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 transform hover:scale-105"
                 >
                   <Facebook className="h-5 w-5 text-blue-600 mr-2" />
                   Facebook
@@ -284,7 +284,7 @@ const Login = () => {
                 {/* Google */}
                 <button
                   type="button"
-                  className="group w-full inline-flex justify-center items-center py-3 px-4 border-2 border-gray-200 rounded-xl shadow-sm bg-white text-sm font-semibold text-gray-700 hover:bg-red-50 hover:border-red-300 transition-all duration-300 transform hover:scale-105"
+                  className="group w-full inline-flex justify-center items-center py-3 px-4 border-2 border-gray-200 rounded-xl -sm bg-white text-sm font-semibold text-gray-700 hover:bg-red-50 hover:border-red-300 transition-all duration-300 transform hover:scale-105"
                 >
                   <svg
                     className="h-5 w-5 mr-2"

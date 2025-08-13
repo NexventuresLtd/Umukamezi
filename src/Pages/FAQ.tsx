@@ -48,12 +48,12 @@ const faqItems = [
   },
   {
     question: 'Are there any discounts for bulk orders?',
-    answer: 'Yes, we offer special pricing for bulk orders and regular exciting offers and gifts. Please contact our sales team at sales@umakamezi.com for more information about bulk discounts and referral rewards.',
+    answer: 'Yes, we offer special pricing for bulk orders and regular exciting offers and gifts. Please contact our sales team at sales@Umukamezi.com for more information about bulk discounts and referral rewards.',
     category: 'Pricing',
     icon: CreditCard
   },
   {
-    question: 'What makes Umakamezi different from other e-commerce sites?',
+    question: 'What makes Umukamezi different from other e-commerce sites?',
     answer: 'We offer high-quality yet budget-friendly products with excellent customer service. We keep up with the latest trends, offer hassle-free returns, low price guarantee, Norton-verified security, and put our customers\' wishes first.',
     category: 'About',
     icon: Shield
@@ -108,7 +108,7 @@ const FAQ = () => {
       icon: Mail,
       title: 'Email Support',
       description: 'Get help via email',
-      action: 'support@umakamezi.com',
+      action: 'support@Umukamezi.com',
       color: 'bg-green-500'
     },
     {
@@ -125,7 +125,7 @@ const FAQ = () => {
       <Header />
       
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-yellow-600 via-yellow-500 to-amber-500 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="relative overflow-hidden bg-gradient-to-r from-yellow-600 via-yellow-500 to-amber-500 py-2 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="animate-fadeInUp">
@@ -143,11 +143,11 @@ const FAQ = () => {
         <div className="absolute bottom-10 right-10 w-16 h-16 bg-white opacity-10 rounded-full animate-bounce"></div>
       </div>
 
-      <div className="py-12 px-4 sm:px-6 lg:px-8">
+      <div className="py-2 px-2 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           
           {/* Search and Filter Section */}
-          <div className="mb-12 bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+          <div className="mb-12 bg-white rounded-2xl -lg p-8 border border-gray-100">
             <div className="flex flex-col lg:flex-row gap-6">
               {/* Search Bar */}
               <div className="flex-1">
@@ -193,7 +193,7 @@ const FAQ = () => {
               {quickActions.map((action, index) => (
                 <div 
                   key={index}
-                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-gray-100 hover:border-yellow-200 transform hover:-translate-y-2 cursor-pointer"
+                  className="group bg-white rounded-2xl -lg hover:-2xl transition-all duration-300 p-6 border border-gray-100 hover:border-yellow-200 transform hover:-translate-y-2 cursor-pointer"
                   style={{
                     animation: `fadeInUp 0.6s ease-out ${index * 0.2}s both`
                   }}
@@ -210,7 +210,7 @@ const FAQ = () => {
           </div>
 
           {/* FAQ Items */}
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+          <div className="bg-white rounded-3xl -2xl overflow-hidden border border-gray-100">
             <div className="bg-gradient-to-r from-gray-50 to-white p-6 border-b border-gray-200">
               <h2 className="text-2xl font-bold text-gray-900 flex items-center">
                 <MessageCircle className="w-6 h-6 text-yellow-600 mr-3" />
@@ -279,7 +279,7 @@ const FAQ = () => {
           </div>
 
           {/* Contact CTA Section */}
-          <div className="mt-12 bg-gradient-to-r from-yellow-600 to-amber-500 rounded-3xl shadow-2xl overflow-hidden">
+          <div className="mt-12 bg-gradient-to-r from-yellow-600 to-amber-500 rounded-3xl -2xl overflow-hidden">
             <div className="px-8 py-12 text-center text-white">
               <div className="max-w-2xl mx-auto">
                 <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -307,7 +307,7 @@ const FAQ = () => {
                 
                 <a
                   href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-white text-yellow-600 font-bold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center px-8 py-4 bg-white text-yellow-600 font-bold rounded-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 -lg"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Contact Our Support Team

@@ -47,7 +47,7 @@ const UserReviews = () => {
       {reviews.length > 0 ? (
         <div className="space-y-6">
           {reviews.map((review) => (
-            <div key={review.id} className="bg-white shadow overflow-hidden rounded-lg">
+            <div key={review.id} className="bg-white  overflow-hidden rounded-lg">
               <div className="px-4 py-5 sm:px-6 border-b border-gray-200 flex justify-between items-center">
                 <div className="flex items-center">
                   <img
@@ -85,12 +85,12 @@ const UserReviews = () => {
           ))}
         </div>
       ) : (
-        <div className="bg-white rounded-lg shadow p-8 text-center">
+        <div className="bg-white rounded-lg  p-8 text-center">
           <h3 className="text-lg font-medium text-gray-900 mb-2">You haven't reviewed any products yet</h3>
           <p className="text-gray-600 mb-4">Your reviews help other customers make informed decisions</p>
           <a
             href="/products"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-yellow-600 hover:bg-yellow-700"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md -sm text-white bg-yellow-600 hover:bg-yellow-700"
           >
             Shop Now
           </a>

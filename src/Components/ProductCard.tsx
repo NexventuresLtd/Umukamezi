@@ -48,24 +48,24 @@ const ProductCard = ({ product }: ProductCardProps) => {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 cursor-pointer group relative"
+      className="bg-white rounded-2xl -lg overflow-hidden hover:-2xl transition-all duration-500 transform hover:-translate-y-1 cursor-pointer group relative"
     >
       {/* Badges */}
       <div className="absolute top-3 left-3 z-10 flex flex-col space-y-1">
         {product.isNew && (
-          <div className="bg-gradient-to-r from-green-500 to-green-700 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg animate-pulse flex items-center space-x-1">
+          <div className="bg-gradient-to-r from-green-500 to-green-700 text-white text-xs font-bold px-2 py-1 rounded-full -lg animate-pulse flex items-center space-x-1">
             <Zap size={10} />
             <span>New</span>
           </div>
         )}
         {product.isBestseller && (
-          <div className="bg-gradient-to-r from-purple-500 to-purple-700 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg flex items-center space-x-1">
+          <div className="bg-gradient-to-r from-purple-500 to-purple-700 text-white text-xs font-bold px-2 py-1 rounded-full -lg flex items-center space-x-1">
             <TrendingUp size={10} />
             <span>Bestseller</span>
           </div>
         )}
         {discountPercentage > 0 && (
-          <div className="bg-gradient-to-r from-red-500 to-red-700 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg animate-bounce">
+          <div className="bg-gradient-to-r from-red-500 to-red-700 text-white text-xs font-bold px-2 py-1 rounded-full -lg animate-bounce">
             -{discountPercentage}%
           </div>
         )}
@@ -94,7 +94,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <div className="absolute top-3 right-3 flex flex-col space-y-2">
           <button
             onClick={handleWishlist}
-            className={`p-2 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 ${
+            className={`p-2 rounded-full -lg transition-all duration-300 transform hover:scale-110 ${
               isWishlisted 
                 ? 'bg-red-500 text-white' 
                 : 'bg-white text-gray-600 hover:bg-red-50 hover:text-red-500'
@@ -103,7 +103,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             <Heart size={16} className={isWishlisted ? 'fill-current' : ''} />
           </button>
           
-          <button className="p-2 bg-white text-gray-600 rounded-full shadow-lg hover:bg-blue-50 hover:text-blue-500 transition-all duration-300 transform hover:scale-110">
+          <button className="p-2 bg-white text-gray-600 rounded-full -lg hover:bg-blue-50 hover:text-blue-500 transition-all duration-300 transform hover:scale-110">
             <Share2 size={16} />
           </button>
         </div>
@@ -189,7 +189,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             addedToCart
               ? 'bg-green-500 text-white'
               : product.inStock
-              ? 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white hover:from-yellow-600 hover:to-yellow-800 shadow-lg hover:shadow-xl'
+              ? 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white hover:from-yellow-600 hover:to-yellow-800 -lg hover:-xl'
               : 'bg-gray-300 text-gray-500 cursor-not-allowed'
           }`}
         >
@@ -218,7 +218,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
       {/* Glow Effect */}
       <div className={`absolute inset-0 rounded-2xl transition-all duration-500 pointer-events-none ${
-        isHovered ? 'shadow-2xl shadow-yellow-500/20 ring-2 ring-yellow-500/20' : ''
+        isHovered ? '-2xl -yellow-500/20 ring-2 ring-yellow-500/20' : ''
       }`} />
     </div>
   );

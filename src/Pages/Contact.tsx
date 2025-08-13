@@ -120,7 +120,7 @@ const Contact = () => {
               {features.map((feature, index) => (
                 <div 
                   key={index}
-                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 hover:border-yellow-200 transform hover:-translate-y-2"
+                  className="group bg-white rounded-2xl -lg hover:-2xl transition-all duration-300 p-8 border border-gray-100 hover:border-yellow-200 transform hover:-translate-y-2"
                   style={{
                     animation: `fadeInUp 0.6s ease-out ${index * 0.2}s both`
                   }}
@@ -136,7 +136,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form & Info Section */}
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+          <div className="bg-white rounded-3xl -2xl overflow-hidden border border-gray-100">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               
               {/* Contact Information */}
@@ -157,8 +157,8 @@ const Contact = () => {
                         </div>
                         <div className="ml-4">
                           <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-                          <p className="text-yellow-400 hover:text-yellow-300 cursor-pointer transition-colors">support@umakamezi.com</p>
-                          <p className="text-yellow-400 hover:text-yellow-300 cursor-pointer transition-colors">sales@umakamezi.com</p>
+                          <p className="text-yellow-400 hover:text-yellow-300 cursor-pointer transition-colors">support@Umukamezi.com</p>
+                          <p className="text-yellow-400 hover:text-yellow-300 cursor-pointer transition-colors">sales@Umukamezi.com</p>
                         </div>
                       </div>
 
@@ -234,7 +234,7 @@ const Contact = () => {
                           onBlur={handleBlur}
                           className={`w-full px-4 py-3 border-2 rounded-xl transition-all duration-300 focus:outline-none ${
                             focusedField === 'name' 
-                              ? 'border-yellow-500 bg-yellow-50 shadow-lg transform scale-105' 
+                              ? 'border-yellow-500 bg-yellow-50 -lg transform scale-105' 
                               : 'border-gray-200 hover:border-gray-300'
                           }`}
                           placeholder="Enter your full name"
@@ -258,7 +258,7 @@ const Contact = () => {
                           onBlur={handleBlur}
                           className={`w-full px-4 py-3 border-2 rounded-xl transition-all duration-300 focus:outline-none ${
                             focusedField === 'email' 
-                              ? 'border-yellow-500 bg-yellow-50 shadow-lg transform scale-105' 
+                              ? 'border-yellow-500 bg-yellow-50 -lg transform scale-105' 
                               : 'border-gray-200 hover:border-gray-300'
                           }`}
                           placeholder="Enter your email address"
@@ -282,7 +282,7 @@ const Contact = () => {
                           onBlur={handleBlur}
                           className={`w-full px-4 py-3 border-2 rounded-xl transition-all duration-300 focus:outline-none ${
                             focusedField === 'subject' 
-                              ? 'border-yellow-500 bg-yellow-50 shadow-lg transform scale-105' 
+                              ? 'border-yellow-500 bg-yellow-50 -lg transform scale-105' 
                               : 'border-gray-200 hover:border-gray-300'
                           }`}
                           placeholder="What's this about?"
@@ -306,7 +306,7 @@ const Contact = () => {
                           onBlur={handleBlur}
                           className={`w-full px-4 py-3 border-2 rounded-xl transition-all duration-300 focus:outline-none resize-none ${
                             focusedField === 'message' 
-                              ? 'border-yellow-500 bg-yellow-50 shadow-lg transform scale-105' 
+                              ? 'border-yellow-500 bg-yellow-50 -lg transform scale-105' 
                               : 'border-gray-200 hover:border-gray-300'
                           }`}
                           placeholder="Tell us how we can help you..."
@@ -317,7 +317,7 @@ const Contact = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-yellow-600 to-yellow-500 text-white font-bold py-4 px-6 rounded-xl hover:from-yellow-700 hover:to-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-300 transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
+                      className="w-full bg-gradient-to-r from-yellow-600 to-yellow-500 text-white font-bold py-4 px-6 rounded-xl hover:from-yellow-700 hover:to-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-300 transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none -lg"
                     >
                       {isSubmitting ? (
                         <div className="flex items-center justify-center space-x-2">
@@ -342,7 +342,7 @@ const Contact = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Join thousands of satisfied customers worldwide who trust Umakamezi for quality products
+                Join thousands of satisfied customers worldwide who trust Umukamezi for quality products
               </p>
             </div>
             
@@ -350,7 +350,7 @@ const Contact = () => {
               {testimonials.map((testimonial, index) => (
                 <div 
                   key={index}
-                  className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                  className="bg-white rounded-2xl -lg p-6 border border-gray-100 hover:-xl transition-all duration-300 transform hover:-translate-y-1"
                   style={{
                     animation: `fadeInUp 0.6s ease-out ${index * 0.2 + 0.5}s both`
                   }}

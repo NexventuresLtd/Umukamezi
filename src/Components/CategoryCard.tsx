@@ -25,18 +25,18 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
       onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer group relative"
+      className="bg-white rounded-2xl -lg overflow-hidden hover:-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer group relative"
     >
       {/* Featured Badge */}
       {category.featured && (
-        <div className="absolute top-3 left-3 z-10 bg-gradient-to-r from-purple-500 to-purple-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
+        <div className="absolute top-3 left-3 z-10 bg-gradient-to-r from-purple-500 to-purple-700 text-white text-xs font-bold px-3 py-1 rounded-full -lg animate-pulse">
           ✨ Featured
         </div>
       )}
       
       {/* Trending Badge */}
       {category.trending && (
-        <div className="absolute top-3 right-3 z-10 bg-gradient-to-r from-green-500 to-green-700 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg flex items-center space-x-1">
+        <div className="absolute top-3 right-3 z-10 bg-gradient-to-r from-green-500 to-green-700 text-white text-xs font-bold px-2 py-1 rounded-full -lg flex items-center space-x-1">
           <TrendingUp size={12} />
           <span>Hot</span>
         </div>
@@ -121,7 +121,7 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
 
       {/* Glow Effect */}
       <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
-        isHovered ? 'shadow-2xl shadow-yellow-500/20 ring-2 ring-yellow-500/20' : ''
+        isHovered ? '-2xl -yellow-500/20 ring-2 ring-yellow-500/20' : ''
       }`} />
     </div>
   );

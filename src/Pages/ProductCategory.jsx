@@ -108,7 +108,7 @@ function ProductCategory() {
           <div className="flex items-center">
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm mr-4"
+              className="flex items-center bg-white px-4 py-2 rounded-lg -sm mr-4"
             >
               <FunnelIcon className="h-5 w-5 mr-2" />
               <span>Filters</span>
@@ -117,7 +117,7 @@ function ProductCategory() {
               <select
                 value={sortOption}
                 onChange={(e) => setSortOption(e.target.value)}
-                className="appearance-none bg-white px-4 py-2 pr-8 rounded-lg shadow-sm"
+                className="appearance-none bg-white px-4 py-2 pr-8 rounded-lg -sm"
               >
                 <option value="featured">Featured</option>
                 <option value="price-low">Price: Low to High</option>
@@ -128,7 +128,7 @@ function ProductCategory() {
               <ChevronDownIcon className="h-4 w-4 absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
             </div>
           </div>
-          <div className="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
+          <div className="flex items-center bg-white px-4 py-2 rounded-lg -sm">
             <button
               onClick={() => setViewMode('grid')}
               className={`p-2 ${viewMode === 'grid' ? 'text-yellow-600' : 'text-gray-500'}`}
@@ -146,7 +146,7 @@ function ProductCategory() {
 
         {/* Filters Panel */}
         {showFilters && (
-          <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+          <div className="bg-white p-6 rounded-lg -md mb-8">
             <h3 className="text-lg font-bold mb-4">Filters</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
@@ -219,7 +219,7 @@ function ProductCategory() {
           viewMode === 'grid' ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {filteredProducts.map((product) => (
-                <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <div key={product.id} className="bg-white rounded-lg -md overflow-hidden hover:-lg transition duration-300">
                   <Link to={`/product/${product.id}`} className="block">
                     <div className="relative pb-3/4 h-48">
                       <img
@@ -265,7 +265,7 @@ function ProductCategory() {
           ) : (
             <div className="space-y-6">
               {filteredProducts.map((product) => (
-                <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 flex">
+                <div key={product.id} className="bg-white rounded-lg -md overflow-hidden hover:-lg transition duration-300 flex">
                   <Link to={`/product/${product.id}`} className="block w-1/3">
                     <div className="relative h-full">
                       <img
@@ -316,7 +316,7 @@ function ProductCategory() {
             </div>
           )
         ) : (
-          <div className="bg-white p-8 rounded-lg shadow-md text-center">
+          <div className="bg-white p-8 rounded-lg -md text-center">
             <h3 className="text-xl font-bold mb-4">No products match your filters</h3>
             <p className="text-gray-600 mb-6">Try adjusting your filters to find what you're looking for.</p>
             <button

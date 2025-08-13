@@ -20,7 +20,7 @@ import Footer from '../Components/Footer';
 
 // Enhanced Breadcrumb
 const Breadcrumb = () => (
-  <nav className="flex items-center text-sm mb-8 bg-gradient-to-r from-gray-50 to-yellow-50 px-6 py-4 rounded-2xl border border-gray-200 shadow-sm">
+  <nav className="flex items-center text-sm mb-8 bg-gradient-to-r from-gray-50 to-yellow-50 px-6 py-4 rounded-2xl border border-gray-200 -sm">
     <a href="/" className="flex items-center text-gray-500 hover:text-yellow-600 transition-all duration-300 transform hover:scale-110">
       <Home size={16} />
     </a>
@@ -152,7 +152,7 @@ const Blog = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
-              Umakamezi Blog
+              Umukamezi Blog
             </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -161,7 +161,7 @@ const Blog = () => {
         </div>
 
         {/* Search and Filter */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 mb-12">
+        <div className="bg-white rounded-2xl -lg p-6 mb-12">
           <div className="flex flex-col lg:flex-row gap-4">
             {/* Search */}
             <div className="flex-1 relative">
@@ -193,7 +193,7 @@ const Blog = () => {
 
         {/* Featured Article */}
         {featuredPost && (
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16 group cursor-pointer">
+          <div className="bg-white rounded-3xl -2xl overflow-hidden mb-16 group cursor-pointer">
             <div className="lg:flex">
               <div className="lg:w-1/2 relative overflow-hidden">
                 <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
@@ -267,7 +267,7 @@ const Blog = () => {
           {filteredPosts.filter(post => !post.featured).map((post, index) => (
             <article
               key={post.id}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group cursor-pointer"
+              className="bg-white rounded-2xl -lg overflow-hidden hover:-2xl transition-all duration-500 transform hover:-translate-y-2 group cursor-pointer"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Image Container */}
@@ -291,7 +291,7 @@ const Blog = () => {
                       e.preventDefault();
                       toggleLike(post.id);
                     }}
-                    className={`p-2 rounded-full shadow-lg transition-all duration-300 ${
+                    className={`p-2 rounded-full -lg transition-all duration-300 ${
                       likedPosts.has(post.id) 
                         ? 'bg-red-500 text-white' 
                         : 'bg-white text-gray-600 hover:bg-red-50 hover:text-red-500'
@@ -300,7 +300,7 @@ const Blog = () => {
                     <Heart size={16} className={likedPosts.has(post.id) ? 'fill-current' : ''} />
                   </button>
                   
-                  <button className="p-2 bg-white text-gray-600 rounded-full shadow-lg hover:bg-blue-50 hover:text-blue-500 transition-all duration-300">
+                  <button className="p-2 bg-white text-gray-600 rounded-full -lg hover:bg-blue-50 hover:text-blue-500 transition-all duration-300">
                     <Share2 size={16} />
                   </button>
                 </div>
@@ -358,13 +358,13 @@ const Blog = () => {
 
         {/* Load More Button */}
         <div className="text-center mb-16">
-          <button className="bg-white text-yellow-600 px-8 py-4 rounded-xl font-bold border-2 border-yellow-600 hover:bg-yellow-600 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button className="bg-white text-yellow-600 px-8 py-4 rounded-xl font-bold border-2 border-yellow-600 hover:bg-yellow-600 hover:text-white transition-all duration-300 transform hover:scale-105 -lg">
             Load More Articles
           </button>
         </div>
 
         {/* Newsletter Subscription */}
-        <div className="bg-gradient-to-r from-yellow-500 to-yellow-700 text-white p-12 rounded-3xl text-center shadow-2xl">
+        <div className="bg-gradient-to-r from-yellow-500 to-yellow-700 text-white p-12 rounded-3xl text-center -2xl">
           <h3 className="text-3xl font-bold mb-4">Stay in the Loop!</h3>
           <p className="text-yellow-100 mb-8 text-lg">
             Get the latest articles and tech insights delivered straight to your inbox

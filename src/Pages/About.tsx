@@ -24,7 +24,7 @@ import Header from '../Components/Header';
 // Enhanced Breadcrumb Component
 const Breadcrumb = () => {
   return (
-    <nav className="flex items-center text-sm mb-8 bg-gradient-to-r from-gray-50 to-yellow-50 px-6 py-4 rounded-2xl border border-gray-200 shadow-sm">
+    <nav className="flex items-center text-sm mb-8 bg-gradient-to-r from-gray-50 to-yellow-50 px-6 py-4 rounded-2xl border border-gray-200 -sm">
       <div className="flex items-center space-x-2">
         <a 
           href="/" 
@@ -33,7 +33,7 @@ const Breadcrumb = () => {
           <Home size={16} className="hover:text-yellow-600" />
         </a>
         <ChevronRight size={14} className="text-gray-400 mx-2" />
-        <span className="text-gray-900 font-semibold bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text px-3 py-1 rounded-md bg-white shadow-sm border border-yellow-200">
+        <span className="text-gray-900 font-semibold bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text px-3 py-1 rounded-md bg-white -sm border border-yellow-200">
           About Us
         </span>
       </div>
@@ -161,7 +161,7 @@ const About = () => {
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
-                About Umakamezi
+                About Umukamezi
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -171,19 +171,19 @@ const About = () => {
         </div>
 
         {/* Main Content */}
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16 transform hover:shadow-3xl transition-all duration-500">
+        <div className="bg-white rounded-3xl -2xl overflow-hidden mb-16 transform hover:-3xl transition-all duration-500">
           <div className="lg:flex">
             {/* Image Section */}
             <div className="lg:w-1/2 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-transparent z-10"></div>
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Umakamezi Team"
+                alt="Umukamezi Team"
                 className="w-full h-full object-cover min-h-[400px] lg:min-h-[600px] transform hover:scale-105 transition-transform duration-700"
               />
               
               {/* Floating Stats */}
-              <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+              <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 -lg">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
                     <Star className="text-white" size={20} />
@@ -195,7 +195,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+              <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 -lg">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                     <TrendingUp className="text-white" size={20} />
@@ -220,7 +220,7 @@ const About = () => {
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p className="relative pl-6">
                       <Quote className="absolute left-0 top-0 text-yellow-300" size={20} />
-                      Welcome to Umakamezi, your premier destination for the latest and greatest products. 
+                      Welcome to Umukamezi, your premier destination for the latest and greatest products. 
                       We've come a long way since our inception, and now we know exactly which direction 
                       to take when supplying you with high-quality yet budget-friendly products.
                     </p>
@@ -251,8 +251,8 @@ const About = () => {
                         key={index}
                         className={`flex items-start p-4 rounded-xl transition-all duration-300 cursor-pointer ${
                           activeFeature === index 
-                            ? 'bg-white shadow-lg transform scale-105' 
-                            : 'bg-white/50 hover:bg-white hover:shadow-md'
+                            ? 'bg-white -lg transform scale-105' 
+                            : 'bg-white/50 hover:bg-white hover:-md'
                         }`}
                         onClick={() => setActiveFeature(index)}
                       >
@@ -328,7 +328,7 @@ const About = () => {
             ].map((stat, index) => (
               <div
                 key={index}
-                className={`${stat.bgColor} p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer group`}
+                className={`${stat.bgColor} p-8 rounded-2xl -lg hover:-xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer group`}
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="text-white" size={32} />
@@ -366,7 +366,7 @@ const About = () => {
                   key={index}
                   className="text-center group cursor-pointer"
                 >
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg">
+                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 -lg">
                     <value.icon size={32} className="text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white group-hover:text-yellow-300 transition-colors duration-300">
@@ -382,15 +382,15 @@ const About = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-yellow-500 to-yellow-700 text-white p-12 rounded-3xl shadow-2xl">
+        <div className="text-center bg-gradient-to-r from-yellow-500 to-yellow-700 text-white p-12 rounded-3xl -2xl">
           <h2 className="text-4xl font-bold mb-4">Ready to Experience the Difference?</h2>
           <p className="text-xl text-yellow-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust Umakamezi for their shopping needs
+            Join thousands of satisfied customers who trust Umukamezi for their shopping needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => window.location.href = '/products'}
-              className="bg-white text-yellow-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
+              className="bg-white text-yellow-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 -lg flex items-center justify-center"
             >
               <ShoppingBag className="mr-2" size={20} />
               Start Shopping

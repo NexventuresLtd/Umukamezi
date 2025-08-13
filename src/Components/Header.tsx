@@ -52,8 +52,8 @@ const Header = () => {
         </div>
       </div> */}
 
-      <header className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'shadow-xl py-2' : 'py-3'
+      <header className={`bg-white -lg sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? '-xl py-2' : 'py-3'
       }`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
@@ -62,11 +62,11 @@ const Header = () => {
               href="/" 
               className="flex items-center space-x-3 text-2xl font-bold text-yellow-600 hover:text-yellow-700 transition-all duration-300 transform hover:scale-105"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-xl flex items-center justify-center text-white font-bold text-lg -lg">
                 U
               </div>
               <span className="hidden sm:block bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text text-transparent">
-                Umakamezi
+                Umukamezi
               </span>
             </a>
 
@@ -82,7 +82,7 @@ const Header = () => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onFocus={() => setIsSearchFocused(true)}
                   onBlur={() => setIsSearchFocused(false)}
-                  className="w-full px-6 py-3 border-2 border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-300 shadow-sm"
+                  className="w-full px-6 py-3 border-2 border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-300 -sm"
                 />
                 <button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-yellow-600 transition-colors duration-300 hover:scale-110">
                   <Search size={20} />
@@ -172,7 +172,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        <div className={`lg:hidden bg-white border-t shadow-lg transition-all duration-300 overflow-hidden ${
+        <div className={`lg:hidden bg-white border-t -lg transition-all duration-300 overflow-hidden ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <nav className="container mx-auto px-4 py-4">

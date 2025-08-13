@@ -80,11 +80,11 @@ const Footer = () => {
           <div className="space-y-6">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-lg flex items-center justify-center text-white font-bold shadow-lg">
+                <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-lg flex items-center justify-center text-white font-bold -lg">
                   U
                 </div>
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-                  Umakamezi
+                  Umukamezi
                 </h3>
               </div>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -120,7 +120,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href="#"
-                    className={`w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 ${social.color} ${social.bg} hover:text-white transition-all duration-300 transform hover:scale-110 hover:shadow-lg group`}
+                    className={`w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 ${social.color} ${social.bg} hover:text-white transition-all duration-300 transform hover:scale-110 hover:-lg group`}
                   >
                     <social.icon size={18} />
                   </a>
@@ -215,8 +215,8 @@ const Footer = () => {
               <li className="flex items-start group">
                 <Mail className="mr-3 mt-1 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" size={18} />
                 <div>
-                  <a href="mailto:support@umakamezi.com" className="hover:text-white transition-colors duration-300">
-                    support@umakamezi.com
+                  <a href="mailto:support@Umukamezi.com" className="hover:text-white transition-colors duration-300">
+                    support@Umukamezi.com
                   </a>
                   <span className="block text-xs text-gray-500">Quick Response Guaranteed</span>
                 </div>
@@ -286,7 +286,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between">
           <div className="text-center md:text-left mb-4 md:mb-0">
             <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Umakamezi. All rights reserved.
+              &copy; {new Date().getFullYear()} Umukamezi. All rights reserved.
             </p>
             <p className="text-gray-500 text-xs mt-1">
               Made with <Heart className="inline w-3 h-3 text-red-500 mx-1" /> for our customers worldwide
@@ -306,7 +306,7 @@ const Footer = () => {
           {/* Back to Top Button */}
           <button
             onClick={scrollToTop}
-            className="bg-gradient-to-r from-yellow-500 to-yellow-700 text-white p-3 rounded-full hover:from-yellow-600 hover:to-yellow-800 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+            className="bg-gradient-to-r from-yellow-500 to-yellow-700 text-white p-3 rounded-full hover:from-yellow-600 hover:to-yellow-800 transition-all duration-300 transform hover:scale-110 -lg hover:-xl"
           >
             <ArrowUp size={20} />
           </button>

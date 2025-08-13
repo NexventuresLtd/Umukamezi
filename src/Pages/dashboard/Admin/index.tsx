@@ -54,7 +54,7 @@ const AdminDashboardHome = () => {
       
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-gray-500 text-sm">Total Sales</h3>
@@ -67,7 +67,7 @@ const AdminDashboardHome = () => {
           </div>
         </div>
         
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-gray-500 text-sm">Total Orders</h3>
@@ -80,7 +80,7 @@ const AdminDashboardHome = () => {
           </div>
         </div>
         
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-gray-500 text-sm">New Customers</h3>
@@ -93,7 +93,7 @@ const AdminDashboardHome = () => {
           </div>
         </div>
         
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-gray-500 text-sm">Products Sold</h3>
@@ -110,7 +110,7 @@ const AdminDashboardHome = () => {
       {/* Charts and Recent Orders */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
         {/* Sales Chart */}
-        <div className="bg-white p-6 rounded-lg shadow lg:col-span-2">
+        <div className="bg-white p-6 rounded-lg  lg:col-span-2">
           <h2 className="text-lg font-medium text-gray-900 mb-4">Sales Overview</h2>
           <div className="h-64 bg-gray-50 rounded flex items-center justify-center">
             <BarChart size={48} className="text-gray-300" />
@@ -119,7 +119,7 @@ const AdminDashboardHome = () => {
         </div>
         
         {/* Top Products */}
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-6 rounded-lg ">
           <h2 className="text-lg font-medium text-gray-900 mb-4">Top Products</h2>
           <div className="space-y-4">
             {topProducts.map((product, index) => (
@@ -138,7 +138,7 @@ const AdminDashboardHome = () => {
       </div>
 
       {/* Recent Orders */}
-      <div className="bg-white rounded-lg shadow overflow-hidden">
+      <div className="bg-white rounded-lg  overflow-hidden">
         <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
           <h2 className="text-lg font-medium text-gray-900">Recent Orders</h2>
           <a
