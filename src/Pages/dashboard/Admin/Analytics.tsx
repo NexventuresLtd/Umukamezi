@@ -30,7 +30,7 @@ const AdminAnalytics = () => {
           <button
             onClick={() => setTimeRange('week')}
             className={`px-3 py-1 rounded-md text-sm font-medium ${
-              timeRange === 'week' ? 'bg-indigo-100 text-indigo-700' : 'text-gray-500 hover:bg-gray-100'
+              timeRange === 'week' ? 'bg-yellow-100 text-yellow-700' : 'text-gray-500 hover:bg-gray-100'
             }`}
           >
             Week
@@ -38,7 +38,7 @@ const AdminAnalytics = () => {
           <button
             onClick={() => setTimeRange('month')}
             className={`px-3 py-1 rounded-md text-sm font-medium ${
-              timeRange === 'month' ? 'bg-indigo-100 text-indigo-700' : 'text-gray-500 hover:bg-gray-100'
+              timeRange === 'month' ? 'bg-yellow-100 text-yellow-700' : 'text-gray-500 hover:bg-gray-100'
             }`}
           >
             Month
@@ -46,7 +46,7 @@ const AdminAnalytics = () => {
           <button
             onClick={() => setTimeRange('quarter')}
             className={`px-3 py-1 rounded-md text-sm font-medium ${
-              timeRange === 'quarter' ? 'bg-indigo-100 text-indigo-700' : 'text-gray-500 hover:bg-gray-100'
+              timeRange === 'quarter' ? 'bg-yellow-100 text-yellow-700' : 'text-gray-500 hover:bg-gray-100'
             }`}
           >
             Quarter
@@ -54,7 +54,7 @@ const AdminAnalytics = () => {
           <button
             onClick={() => setTimeRange('year')}
             className={`px-3 py-1 rounded-md text-sm font-medium ${
-              timeRange === 'year' ? 'bg-indigo-100 text-indigo-700' : 'text-gray-500 hover:bg-gray-100'
+              timeRange === 'year' ? 'bg-yellow-100 text-yellow-700' : 'text-gray-500 hover:bg-gray-100'
             }`}
           >
             Year
@@ -100,7 +100,7 @@ const AdminAnalytics = () => {
         <button
           onClick={() => setChartType('sales')}
           className={`px-3 py-1 rounded-md text-sm font-medium ${
-            chartType === 'sales' ? 'bg-indigo-100 text-indigo-700' : 'text-gray-500 hover:bg-gray-100'
+            chartType === 'sales' ? 'bg-yellow-100 text-yellow-700' : 'text-gray-500 hover:bg-gray-100'
           }`}
         >
           Sales
@@ -108,7 +108,7 @@ const AdminAnalytics = () => {
         <button
           onClick={() => setChartType('orders')}
           className={`px-3 py-1 rounded-md text-sm font-medium ${
-            chartType === 'orders' ? 'bg-indigo-100 text-indigo-700' : 'text-gray-500 hover:bg-gray-100'
+            chartType === 'orders' ? 'bg-yellow-100 text-yellow-700' : 'text-gray-500 hover:bg-gray-100'
           }`}
         >
           Orders
@@ -116,7 +116,7 @@ const AdminAnalytics = () => {
         <button
           onClick={() => setChartType('customers')}
           className={`px-3 py-1 rounded-md text-sm font-medium ${
-            chartType === 'customers' ? 'bg-indigo-100 text-indigo-700' : 'text-gray-500 hover:bg-gray-100'
+            chartType === 'customers' ? 'bg-yellow-100 text-yellow-700' : 'text-gray-500 hover:bg-gray-100'
           }`}
         >
           Customers

@@ -131,13 +131,13 @@ function ProductCategory() {
           <div className="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
             <button
               onClick={() => setViewMode('grid')}
-              className={`p-2 ${viewMode === 'grid' ? 'text-indigo-600' : 'text-gray-500'}`}
+              className={`p-2 ${viewMode === 'grid' ? 'text-yellow-600' : 'text-gray-500'}`}
             >
               <Squares2X2Icon className="h-5 w-5" />
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`p-2 ${viewMode === 'list' ? 'text-indigo-600' : 'text-gray-500'}`}
+              className={`p-2 ${viewMode === 'list' ? 'text-yellow-600' : 'text-gray-500'}`}
             >
               <ListBulletIcon className="h-5 w-5" />
             </button>
@@ -198,14 +198,14 @@ function ProductCategory() {
                 <label className="flex items-center mb-2">
                   <input
                     type="checkbox"
-                    className="rounded text-indigo-600 focus:ring-indigo-500"
+                    className="rounded text-yellow-600 focus:ring-yellow-500"
                   />
                   <span className="ml-2">In Stock Only</span>
                 </label>
                 <label className="flex items-center">
                   <input
                     type="checkbox"
-                    className="rounded text-indigo-600 focus:ring-indigo-500"
+                    className="rounded text-yellow-600 focus:ring-yellow-500"
                   />
                   <span className="ml-2">Featured Items</span>
                 </label>
@@ -228,7 +228,7 @@ function ProductCategory() {
                         className="absolute h-full w-full object-cover"
                       />
                       {product.featured && (
-                        <span className="absolute top-2 right-2 bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded">
+                        <span className="absolute top-2 right-2 bg-yellow-600 text-white text-xs font-bold px-2 py-1 rounded">
                           Featured
                         </span>
                       )}
@@ -245,7 +245,7 @@ function ProductCategory() {
                         <span className="text-gray-600 text-sm ml-2">({product.reviews})</span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-lg font-bold text-indigo-600">${product.price.toFixed(2)}</span>
+                        <span className="text-lg font-bold text-yellow-600">${product.price.toFixed(2)}</span>
                         {product.stock > 0 ? (
                           <span className="text-green-600 text-sm">In Stock</span>
                         ) : (
@@ -255,7 +255,7 @@ function ProductCategory() {
                     </div>
                   </Link>
                   <div className="px-4 pb-4">
-                    <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                    <button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded transition duration-300">
                       Add to Cart
                     </button>
                   </div>
@@ -274,7 +274,7 @@ function ProductCategory() {
                         className="absolute h-full w-full object-cover"
                       />
                       {product.featured && (
-                        <span className="absolute top-2 right-2 bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded">
+                        <span className="absolute top-2 right-2 bg-yellow-600 text-white text-xs font-bold px-2 py-1 rounded">
                           Featured
                         </span>
                       )}
@@ -295,7 +295,7 @@ function ProductCategory() {
                       <p className="text-gray-600 mb-4">{product.description.substring(0, 150)}...</p>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-xl font-bold text-indigo-600">${product.price.toFixed(2)}</span>
+                      <span className="text-xl font-bold text-yellow-600">${product.price.toFixed(2)}</span>
                       {product.stock > 0 ? (
                         <span className="text-green-600">In Stock ({product.stock} available)</span>
                       ) : (
@@ -303,10 +303,10 @@ function ProductCategory() {
                       )}
                     </div>
                     <div className="mt-4 flex space-x-4">
-                      <button className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                      <button className="flex-1 bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded transition duration-300">
                         Add to Cart
                       </button>
-                      <button className="flex-1 border border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-bold py-2 px-4 rounded transition duration-300">
+                      <button className="flex-1 border border-yellow-600 text-yellow-600 hover:bg-yellow-50 font-bold py-2 px-4 rounded transition duration-300">
                         Add to Wishlist
                       </button>
                     </div>
@@ -325,7 +325,7 @@ function ProductCategory() {
                 setRatingFilter(0)
                 setSortOption('featured')
               }}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded transition duration-300"
+              className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-6 rounded transition duration-300"
             >
               Reset Filters
             </button>

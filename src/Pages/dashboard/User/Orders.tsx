@@ -78,17 +78,17 @@ const UserOrders = () => {
                       order.status === 'Delivered' 
                         ? 'bg-green-100 text-green-800' 
                         : order.status === 'Shipped' 
-                          ? 'bg-blue-100 text-blue-800' 
+                          ? 'bg-gray-100 text-gray-800' 
                           : 'bg-yellow-100 text-yellow-800'
                     }`}>
                       {order.status}
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-indigo-600 hover:text-indigo-900 mr-3">
+                    <button className="text-yellow-600 hover:text-yellow-900 mr-3">
                       View
                     </button>
-                    <button className="text-indigo-600 hover:text-indigo-900">
+                    <button className="text-yellow-600 hover:text-yellow-900">
                       Track
                     </button>
                   </td>

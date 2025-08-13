@@ -35,7 +35,7 @@ const UserDashboardHome = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div className="bg-white p-6 rounded-lg shadow">
           <div className="flex items-center">
-            <div className="p-3 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+            <div className="p-3 rounded-full bg-yellow-100 text-yellow-600 mr-4">
               <ShoppingBag size={24} />
             </div>
             <div>
@@ -71,7 +71,7 @@ const UserDashboardHome = () => {
         
         <div className="bg-white p-6 rounded-lg shadow">
           <div className="flex items-center">
-            <div className="p-3 rounded-full bg-blue-100 text-blue-600 mr-4">
+            <div className="p-3 rounded-full bg-gray-100 text-gray-600 mr-4">
               <CreditCard size={24} />
             </div>
             <div>
@@ -88,7 +88,7 @@ const UserDashboardHome = () => {
           <h2 className="text-lg font-medium text-gray-900">Recent Orders</h2>
           <Link
             to="/dashboard/orders"
-            className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+            className="text-sm font-medium text-yellow-600 hover:text-yellow-500"
           >
             View All
           </Link>
@@ -112,7 +112,7 @@ const UserDashboardHome = () => {
                       order.status === 'Delivered'
                         ? 'bg-green-100 text-green-800'
                         : order.status === 'Shipped'
-                        ? 'bg-blue-100 text-blue-800'
+                        ? 'bg-gray-100 text-gray-800'
                         : 'bg-yellow-100 text-yellow-800'
                     }`}
                   >
@@ -150,7 +150,7 @@ const UserDashboardHome = () => {
               </div>
               <Link
                 to="/dashboard/settings"
-                className="inline-block mt-4 text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                className="inline-block mt-4 text-sm font-medium text-yellow-600 hover:text-yellow-500"
               >
                 Edit Profile
               </Link>
@@ -165,7 +165,7 @@ const UserDashboardHome = () => {
               </div>
               <Link
                 to="/dashboard/settings"
-                className="inline-block mt-4 text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                className="inline-block mt-4 text-sm font-medium text-yellow-600 hover:text-yellow-500"
               >
                 Manage Addresses
               </Link>

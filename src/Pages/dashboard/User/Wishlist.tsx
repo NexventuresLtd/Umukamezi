@@ -57,7 +57,7 @@ const UserWishlist = () => {
           <p className="text-gray-600 mb-4">Save items you love for easy access later</p>
           <a
             href="/products"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-yellow-600 hover:bg-yellow-700"
           >
             Continue Shopping
           </a>

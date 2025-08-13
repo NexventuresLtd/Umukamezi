@@ -109,7 +109,7 @@ const AdminOrders = () => {
                         order.status === 'Processing'
                           ? 'border-yellow-300 bg-yellow-50 focus:ring-yellow-500'
                           : order.status === 'Shipped'
-                          ? 'border-blue-300 bg-blue-50 focus:ring-blue-500'
+                          ? 'border-gray-300 bg-gray-50 focus:ring-gray-500'
                           : 'border-green-300 bg-green-50 focus:ring-green-500'
                       }`}
                     >
@@ -119,7 +119,7 @@ const AdminOrders = () => {
                     </select>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-indigo-600 hover:text-indigo-900 mr-3">
+                    <button className="text-yellow-600 hover:text-yellow-900 mr-3">
                       View
                     </button>
                     <button className="text-gray-600 hover:text-gray-900">

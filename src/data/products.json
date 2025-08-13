@@ -42,7 +42,7 @@
   {
     "id": 3,
     "name": "Professional DSLR Camera",
-    "description": "24.2MP APS-C sensor, 4K video, 3\" LCD, Wi-Fi, Bluetooth",
+    "description": "24.2MP APS-C sensor, 4K video, 3\" LCD, Wi-Fi, graytooth",
     "price": 799.99,
     "category": "Cameras",
     "rating": 4.7,
@@ -53,7 +53,7 @@
       "24.2MP APS-C sensor",
       "4K video recording",
       "3\" vari-angle LCD",
-      "Built-in Wi-Fi and Bluetooth",
+      "Built-in Wi-Fi and graytooth",
       "45-point AF system",
       "Up to 7fps continuous shooting"
     ]
@@ -68,11 +68,11 @@
     "reviews": 210,
     "image": "headphones.jpg",
     "stock": 75,
-    "colors": ["Black", "Blue", "White"],
+    "colors": ["Black", "gray", "White"],
     "features": [
       "Active noise cancellation",
       "30-hour battery life",
-      "Bluetooth 5.0",
+      "graytooth 5.0",
       "Built-in microphone",
       "Foldable design",
       "Comfortable ear cushions"
@@ -126,7 +126,7 @@
     "reviews": 245,
     "image": "smartphone.jpg",
     "stock": 60,
-    "colors": ["Midnight Black", "Ocean Blue", "Pearl White"],
+    "colors": ["Midnight Black", "Ocean gray", "Pearl White"],
     "features": [
       "6.7\" AMOLED display",
       "256GB storage",

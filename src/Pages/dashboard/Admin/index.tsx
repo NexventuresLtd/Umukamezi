@@ -61,7 +61,7 @@ const AdminDashboardHome = () => {
               <p className="text-2xl font-bold">${stats.totalSales.toFixed(2)}</p>
               <p className="text-sm text-green-600 mt-1">+12.5% from last month</p>
             </div>
-            <div className="p-3 rounded-full bg-blue-100 text-blue-600">
+            <div className="p-3 rounded-full bg-gray-100 text-gray-600">
               <BarChart size={24} />
             </div>
           </div>
@@ -124,7 +124,7 @@ const AdminDashboardHome = () => {
           <div className="space-y-4">
             {topProducts.map((product, index) => (
               <div key={index} className="flex items-center">
-                <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-medium mr-3">
+                <div className="w-8 h-8 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center font-medium mr-3">
                   {index + 1}
                 </div>
                 <div className="flex-1">
@@ -143,7 +143,7 @@ const AdminDashboardHome = () => {
           <h2 className="text-lg font-medium text-gray-900">Recent Orders</h2>
           <a
             href="/admin/orders"
-            className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+            className="text-sm font-medium text-yellow-600 hover:text-yellow-500"
           >
             View All
           </a>
@@ -190,7 +190,7 @@ const AdminDashboardHome = () => {
                         order.status === 'Delivered'
                           ? 'bg-green-100 text-green-800'
                           : order.status === 'Shipped'
-                          ? 'bg-blue-100 text-blue-800'
+                          ? 'bg-gray-100 text-gray-800'
                           : 'bg-yellow-100 text-yellow-800'
                       }`}
                     >
@@ -201,7 +201,7 @@ const AdminDashboardHome = () => {
                     ${order.total.toFixed(2)}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <a href="#" className="text-indigo-600 hover:text-indigo-900">
+                    <a href="#" className="text-yellow-600 hover:text-yellow-900">
                       View
                     </a>
                   </td>

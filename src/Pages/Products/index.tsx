@@ -42,11 +42,11 @@ const ProductsPage = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Breadcrumb */}
         <div className="flex items-center text-sm text-gray-600 mb-6">
-          <Link to="/" className="hover:text-indigo-600">
+          <Link to="/" className="hover:text-yellow-600">
             Home
           </Link>
           <span className="mx-2">/</span>
-          <Link to="/products" className="hover:text-indigo-600">
+          <Link to="/products" className="hover:text-yellow-600">
             Products
           </Link>
           {category && (
@@ -91,7 +91,7 @@ const ProductsPage = () => {
                 <li>
                   <Link
                     to="/products"
-                    className={`block py-1 ${!category ? 'text-indigo-600 font-medium' : 'text-gray-600 hover:text-indigo-600'}`}
+                    className={`block py-1 ${!category ? 'text-yellow-600 font-medium' : 'text-gray-600 hover:text-yellow-600'}`}
                   >
                     All Categories
                   </Link>
@@ -99,7 +99,7 @@ const ProductsPage = () => {
                 <li>
                   <Link
                     to="/products/tablets"
-                    className={`block py-1 ${category === 'tablets' ? 'text-indigo-600 font-medium' : 'text-gray-600 hover:text-indigo-600'}`}
+                    className={`block py-1 ${category === 'tablets' ? 'text-yellow-600 font-medium' : 'text-gray-600 hover:text-yellow-600'}`}
                   >
                     Tablets
                   </Link>
@@ -107,7 +107,7 @@ const ProductsPage = () => {
                 <li>
                   <Link
                     to="/products/computers"
-                    className={`block py-1 ${category === 'computers' ? 'text-indigo-600 font-medium' : 'text-gray-600 hover:text-indigo-600'}`}
+                    className={`block py-1 ${category === 'computers' ? 'text-yellow-600 font-medium' : 'text-gray-600 hover:text-yellow-600'}`}
                   >
                     Computers
                   </Link>
@@ -115,7 +115,7 @@ const ProductsPage = () => {
                 <li>
                   <Link
                     to="/products/cameras"
-                    className={`block py-1 ${category === 'cameras' ? 'text-indigo-600 font-medium' : 'text-gray-600 hover:text-indigo-600'}`}
+                    className={`block py-1 ${category === 'cameras' ? 'text-yellow-600 font-medium' : 'text-gray-600 hover:text-yellow-600'}`}
                   >
                     Cameras
                   </Link>
@@ -123,7 +123,7 @@ const ProductsPage = () => {
                 <li>
                   <Link
                     to="/products/pro-audio"
-                    className={`block py-1 ${category === 'pro-audio' ? 'text-indigo-600 font-medium' : 'text-gray-600 hover:text-indigo-600'}`}
+                    className={`block py-1 ${category === 'pro-audio' ? 'text-yellow-600 font-medium' : 'text-gray-600 hover:text-yellow-600'}`}
                   >
                     Pro Audio
                   </Link>
@@ -131,7 +131,7 @@ const ProductsPage = () => {
                 <li>
                   <Link
                     to="/products/pro-games"
-                    className={`block py-1 ${category === 'pro-games' ? 'text-indigo-600 font-medium' : 'text-gray-600 hover:text-indigo-600'}`}
+                    className={`block py-1 ${category === 'pro-games' ? 'text-yellow-600 font-medium' : 'text-gray-600 hover:text-yellow-600'}`}
                   >
                     Pro Games
                   </Link>
@@ -139,7 +139,7 @@ const ProductsPage = () => {
                 <li>
                   <Link
                     to="/products/lightings"
-                    className={`block py-1 ${category === 'lightings' ? 'text-indigo-600 font-medium' : 'text-gray-600 hover:text-indigo-600'}`}
+                    className={`block py-1 ${category === 'lightings' ? 'text-yellow-600 font-medium' : 'text-gray-600 hover:text-yellow-600'}`}
                   >
                     Lightings
                   </Link>
@@ -147,7 +147,7 @@ const ProductsPage = () => {
                 <li>
                   <Link
                     to="/products/phones"
-                    className={`block py-1 ${category === 'phones' ? 'text-indigo-600 font-medium' : 'text-gray-600 hover:text-indigo-600'}`}
+                    className={`block py-1 ${category === 'phones' ? 'text-yellow-600 font-medium' : 'text-gray-600 hover:text-yellow-600'}`}
                   >
                     Phones
                   </Link>
@@ -155,7 +155,7 @@ const ProductsPage = () => {
                 <li>
                   <Link
                     to="/products/accessories"
-                    className={`block py-1 ${category === 'accessories' ? 'text-indigo-600 font-medium' : 'text-gray-600 hover:text-indigo-600'}`}
+                    className={`block py-1 ${category === 'accessories' ? 'text-yellow-600 font-medium' : 'text-gray-600 hover:text-yellow-600'}`}
                   >
                     Accessories
                   </Link>
@@ -179,7 +179,7 @@ const ProductsPage = () => {
                   id="sort"
                   value={sortOption}
                   onChange={(e) => setSortOption(e.target.value)}
-                  className="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 >
                   <option value="featured">Featured</option>
                   <option value="price-low">Price: Low to High</option>
@@ -207,7 +207,7 @@ const ProductsPage = () => {
                     setSortOption('featured');
                     setPriceRange([0, 2000]);
                   }}
-                  className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+                  className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700"
                 >
                   Reset Filters
                 </button>

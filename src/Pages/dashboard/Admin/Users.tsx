@@ -78,7 +78,7 @@ const AdminUsers = () => {
                 <tr key={user.id}>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
-                      <div className="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-medium">
+                      <div className="flex-shrink-0 h-10 w-10 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 font-medium">
                         {user.name.charAt(0)}
                       </div>
                       <div className="ml-4">
@@ -115,7 +115,7 @@ const AdminUsers = () => {
                     >
                       {user.status === 'Active' ? 'Deactivate' : 'Activate'}
                     </button>
-                    <button className="text-indigo-600 hover:text-indigo-900 mr-3">
+                    <button className="text-yellow-600 hover:text-yellow-900 mr-3">
                       Edit
                     </button>
                     <button className="text-red-600 hover:text-red-900">

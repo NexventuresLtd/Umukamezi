@@ -36,7 +36,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Discover Amazing Products at <span className="text-indigo-600">Umakamezi</span>
+                Discover Amazing Products at <span className="text-yellow-600">Umakamezi</span>
               </h1>
               <p className="text-lg text-gray-600 mb-6">
                 We offer high-quality yet budget-friendly products with excellent customer service
@@ -44,7 +44,7 @@ const Home = () => {
               </p>
               <Link
                 to="/products"
-                className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition"
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-yellow-700 transition"
               >
                 Shop Now
               </Link>
@@ -84,7 +84,7 @@ const Home = () => {
           <div className="text-center mt-8">
             <Link
               to="/products"
-              className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition"
+              className="inline-block bg-yellow-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-yellow-700 transition"
             >
               View All Products
             </Link>
@@ -97,7 +97,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6 rounded-lg bg-gray-50">
-              <div className="text-indigo-600 mb-4">
+              <div className="text-yellow-600 mb-4">
                 <Truck size={40} className="mx-auto" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Worldwide Shipping</h3>
@@ -106,7 +106,7 @@ const Home = () => {
               </p>
             </div>
             <div className="text-center p-6 rounded-lg bg-gray-50">
-              <div className="text-indigo-600 mb-4">
+              <div className="text-yellow-600 mb-4">
                 <Shield size={40} className="mx-auto" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Verified Security</h3>
@@ -115,7 +115,7 @@ const Home = () => {
               </p>
             </div>
             <div className="text-center p-6 rounded-lg bg-gray-50">
-              <div className="text-indigo-600 mb-4">
+              <div className="text-yellow-600 mb-4">
                 <HeadphonesIcon size={40} className="mx-auto" />
               </div>
               <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
