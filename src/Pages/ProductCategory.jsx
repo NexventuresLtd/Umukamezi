@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { StarIcon, FunnelIcon, Squares2X2Icon, ListBulletIcon, ChevronDownIcon } from '@heroicons/react/24/solid'
-import products from '../data/products.json' // Adjust the path as necessary
+import products from '@/data/products.json';
 
 function ProductCategory() {
   const { category } = useParams()
