@@ -168,7 +168,7 @@ const Contact = () => {
                         </div>
                         <div className="ml-4">
                           <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                          <p className="text-yellow-400">+1 (555) 123-4567</p>
+                          <p className="text-yellow-400">+250 781 691 713</p>
                           <p className="text-gray-300 text-sm">Available 24/7</p>
                         </div>
                       </div>
@@ -179,9 +179,9 @@ const Contact = () => {
                         </div>
                         <div className="ml-4">
                           <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                          <p className="text-gray-300">123 Tech Street</p>
-                          <p className="text-gray-300">Digital City, 10001</p>
-                          <p className="text-gray-300">United States</p>
+                          <p className="text-gray-300">KN 70 St, Kigali </p>
+                          <p className="text-gray-300">Centenary house kigali</p>
+                          <p className="text-gray-300">Rwanda</p>
                         </div>
                       </div>
                     </div>
