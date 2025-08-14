@@ -23,7 +23,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [addedToCart, setAddedToCart] = useState(false);
 
-  const discountPercentage = product.originalPrice 
+  const discountPercentage = product.originalPrice
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : product.discount || 0;
 
@@ -75,43 +75,41 @@ const ProductCard = ({ product }: ProductCardProps) => {
       <div className="relative h-64 overflow-hidden" onClick={handleViewProduct}>
         {!imageLoaded && (
           <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse flex items-center justify-center">
-            <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-xl flex items-center justify-center text-white font-bold text-2xl">
+            <div className="w-20 h-20 bg-gradient-to-br bg-yellow-500 rounded-xl flex items-center justify-center text-white font-bold text-2xl">
               U
             </div>
           </div>
         )}
-
-        <img
-          src={product.image}
-          alt={product.name}
-          onLoad={() => setImageLoaded(true)}
-          className={`w-full h-full object-cover transition-all duration-700 transform ${
-            isHovered ? 'scale-110' : 'scale-100'
-          } ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-        />
+        <div className="h-64 overflow-hidden">
+          <img
+            src={product.image}
+            alt={product.name}
+            onLoad={() => setImageLoaded(true)}
+            className={`w-full h-full object-contain transition-all duration-700 transform ${isHovered ? 'scale-110' : 'scale-100'
+              } ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+          />
+        </div>
 
         {/* Quick Action Buttons */}
         <div className="absolute top-3 right-3 flex flex-col space-y-2">
           <button
             onClick={handleWishlist}
-            className={`p-2 rounded-full -lg transition-all duration-300 transform hover:scale-110 ${
-              isWishlisted 
-                ? 'bg-red-500 text-white' 
+            className={`p-2 rounded-full -lg transition-all duration-300 transform hover:scale-110 ${isWishlisted
+                ? 'bg-red-500 text-white'
                 : 'bg-white text-gray-600 hover:bg-red-50 hover:text-red-500'
-            }`}
+              }`}
           >
             <Heart size={16} className={isWishlisted ? 'fill-current' : ''} />
           </button>
-          
+
           <button className="p-2 bg-white text-gray-600 rounded-full -lg hover:bg-blue-50 hover:text-blue-500 transition-all duration-300 transform hover:scale-110">
             <Share2 size={16} />
           </button>
         </div>
 
         {/* Hover Overlay */}
-        <div className={`absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center transition-all duration-300 ${
-          isHovered ? 'opacity-100' : 'opacity-0'
-        }`}>
+        <div className={`absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center transition-all duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'
+          }`}>
           <button
             onClick={handleViewProduct}
             className="bg-white text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
@@ -122,17 +120,17 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
 
         {/* Stock Indicator */}
-        {!product.inStock && (
+        {/* {!product.inStock && (
           <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
             <span className="text-white font-bold text-lg">Out of Stock</span>
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Content */}
       <div className="p-5">
         {/* Product Name */}
-        <h3 
+        <h3
           className="font-semibold text-gray-900 hover:text-yellow-600 mb-2 line-clamp-2 cursor-pointer transition-colors duration-300"
           onClick={handleViewProduct}
         >
@@ -146,11 +144,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
               <Star
                 key={i}
                 size={14}
-                className={`transition-colors duration-300 ${
-                  i < Math.floor(product.rating) 
-                    ? 'text-yellow-400 fill-yellow-400' 
+                className={`transition-colors duration-300 ${i < Math.floor(product.rating)
+                    ? 'text-yellow-400 fill-yellow-400'
                     : 'text-gray-300'
-                }`}
+                  }`}
               />
             ))}
           </div>
@@ -185,21 +182,20 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <button
           onClick={handleAddToCart}
           disabled={!product.inStock}
-          className={`w-full py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 ${
-            addedToCart
+          className={`w-full py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 ${addedToCart
               ? 'bg-green-500 text-white'
               : product.inStock
-              ? 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white hover:from-yellow-600 hover:to-yellow-800 -lg hover:-xl'
-              : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-          }`}
+                ? 'bg-gradient-to-r bg-yellow-500 text-white hover:from-yellow-600 hover:to-yellow-800 -lg hover:-xl'
+                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+            }`}
         >
           <ShoppingCart size={18} />
           <span>
-            {addedToCart 
-              ? '✓ Added to Cart!' 
-              : product.inStock 
-              ? 'Add to Cart' 
-              : 'Out of Stock'
+            {addedToCart
+              ? '✓ Added to Cart!'
+              : product.inStock
+                ? 'Add to Cart'
+                : 'Out of Stock'
             }
           </span>
         </button>
@@ -211,15 +207,14 @@ const ProductCard = ({ product }: ProductCardProps) => {
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <span>In Stock & Ready to Ship</span>
             </span>
-            </div>
-          
+          </div>
+
         )}
       </div>
 
       {/* Glow Effect */}
-      <div className={`absolute inset-0 rounded-2xl transition-all duration-500 pointer-events-none ${
-        isHovered ? '-2xl -yellow-500/20 ring-2 ring-yellow-500/20' : ''
-      }`} />
+      <div className={`absolute inset-0 rounded-2xl transition-all duration-500 pointer-events-none ${isHovered ? '-2xl -yellow-500/20 ring-2 ring-yellow-500/20' : ''
+        }`} />
     </div>
   );
 };

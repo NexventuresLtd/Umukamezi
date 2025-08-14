@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
-import { ShoppingCart, User, Search, Menu, X, Heart} from 'lucide-react';
+import { ShoppingCart, User, Search, Menu, X, Heart } from 'lucide-react';
+interface HeaderProps {
+  fixedD?: boolean;
+}
 
-const Header = () => {
+const Header = ({ fixedD }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -52,18 +55,23 @@ const Header = () => {
         </div>
       </div> */}
 
-      <header className={`bg-white -lg sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? '-xl py-2' : 'py-3'
-      }`}>
-        <div className="container mx-auto px-4">
+      <header className={`  top-0 z-50 transition-all duration-300 w-full 
+      ${fixedD ?
+          isScrolled ? 'bg-white py-2 sticky text-gray-500' : 'fixed py-3 text-white'
+          :
+          isScrolled ? 'bg-white py-2 sticky text-gray-500' : ' bg-white py-3 sticky text-gray-500 '
+
+        }
+        }`}>
+        <div className="max-w-11/12  mx-auto px-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a 
-              href="/" 
+            <a
+              href="/"
               className="flex items-center space-x-3 text-2xl font-bold text-yellow-600 hover:text-yellow-700 transition-all duration-300 transform hover:scale-105"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-xl flex items-center justify-center text-white font-bold text-lg -lg">
-                U
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg overflow-hidden">
+                <img className='w-full h-full scale-120' src='Umukamezilogo.jpg' />
               </div>
               <span className="hidden sm:block bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text text-transparent">
                 Umukamezi
@@ -72,9 +80,8 @@ const Header = () => {
 
             {/* Search Bar */}
             <div className="hidden lg:flex flex-1 mx-10 max-w-2xl">
-              <div className={`relative w-full transition-all duration-300 ${
-                isSearchFocused ? 'transform scale-105' : ''
-              }`}>
+              <div className={`relative w-full transition-all duration-300 ${isSearchFocused ? 'transform scale-105' : ''
+                }`}>
                 <input
                   type="text"
                   placeholder="Search for quality products..."
@@ -84,13 +91,13 @@ const Header = () => {
                   onBlur={() => setIsSearchFocused(false)}
                   className="w-full px-6 py-3 border-2 border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-300 -sm"
                 />
-                <button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-yellow-600 transition-colors duration-300 hover:scale-110">
+                <button className="absolute right-3 top-1/2 transform -translate-y-1/2  hover:text-yellow-600 transition-colors duration-300 hover:scale-110">
                   <Search size={20} />
                 </button>
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery('')}
-                    className="absolute right-12 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-red-500 transition-colors duration-300"
+                    className="absolute right-12 top-1/2 transform -translate-y-1/2  hover:text-red-500 transition-colors duration-300"
                   >
                     <X size={16} />
                   </button>
@@ -104,10 +111,10 @@ const Header = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-gray-700 hover:text-yellow-600 font-medium transition-all duration-300 relative group"
+                  className=" hover:text-yellow-600 font-medium transition-all duration-300 relative group"
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-500 to-yellow-700 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
             </nav>
@@ -115,9 +122,9 @@ const Header = () => {
             {/* Icons */}
             <div className="flex items-center space-x-6  pl-8">
               {/* Wishlist - Hidden on small screens */}
-              <a 
-                href="/wishlist" 
-                className="hidden md:flex text-gray-700 hover:text-red-500 transition-all duration-300 relative group transform hover:scale-110  "
+              <a
+                href="/cart-wish"
+                className="hidden md:flex hover:text-red-500 transition-all duration-300 relative group transform hover:scale-110  "
               >
                 <Heart size={22} />
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-bounce">
@@ -126,20 +133,20 @@ const Header = () => {
               </a>
 
               {/* User Account */}
-              <a 
-                href="/login" 
-                className="text-gray-700 hover:text-yellow-600 transition-all duration-300 transform hover:scale-110"
+              <a
+                href="/login"
+                className=" hover:text-yellow-600 transition-all duration-300 transform hover:scale-110"
               >
                 <User size={22} />
               </a>
 
               {/* Shopping Cart */}
-              <a 
-                href="/cart" 
-                className="text-gray-700 hover:text-yellow-600 relative transition-all duration-300 transform hover:scale-110 group"
+              <a
+                href="/cart-wish"
+                className=" hover:text-yellow-600 relative transition-all duration-300 transform hover:scale-110 group"
               >
                 <ShoppingCart size={22} />
-                <span className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-yellow-700 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center font-bold animate-pulse group-hover:animate-bounce">
+                <span className="absolute -top-2 -right-2 bg-gradient-to-r bg-yellow-500 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center font-bold animate-pulse group-hover:animate-bounce">
                   3
                 </span>
               </a>
@@ -172,12 +179,11 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        <div className={`lg:hidden bg-white border-t -lg transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}>
-          <nav className="container mx-auto px-4 py-4">
+        <div className={`lg:hidden bg-white border-t -lg transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}>
+          <nav className="max-w-11/12  mx-auto px-4 py-4">
             <div className="flex flex-col space-y-4">
-              {[...navItems, { href: '/wishlist', label: 'Wishlist' }].map((item, index) => (
+              {[...navItems, { href: '/cart-wish', label: 'Wishlist' }].map((item, index) => (
                 <a
                   key={item.href}
                   href={item.href}
@@ -195,7 +201,7 @@ const Header = () => {
 
       {/* Trust Indicators Bar */}
       {/* <div className="bg-gray-50 border-b py-2 px-4">
-        <div className="container mx-auto">
+        <div className="max-w-11/12  mx-auto">
           <div className="flex items-center justify-center space-x-8 text-xs text-gray-600">
             <div className="flex items-center space-x-1 hover:text-yellow-600 transition-colors duration-300">
               <Star size={12} className="text-yellow-500" />

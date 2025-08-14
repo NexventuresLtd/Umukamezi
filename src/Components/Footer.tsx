@@ -1,15 +1,14 @@
-import { useState } from 'react';
-import { 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
-  Truck, 
-  Shield, 
-  Headphones, 
-  Map, 
-  Mail, 
-  Phone, 
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Truck,
+  Shield,
+  Headphones,
+  Map,
+  Mail,
+  Phone,
   Award,
   Clock,
   Users,
@@ -20,17 +19,17 @@ import {
 } from 'lucide-react';
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-  const [setIsSubscribed] = useState(false);
+  // const [email, setEmail] = useState('');
+  // const [setIsSubscribed] = useState(false);
 
-  const handleNewsletter = (e) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setIsSubscribed(true);
-      setEmail('');
-      setTimeout(() => setIsSubscribed(false), 3000);
-    }
-  };
+  // const handleNewsletter = (e) => {
+  //   e.preventDefault();
+  //   if (email.trim()) {
+  //     setIsSubscribed(true);
+  //     setEmail('');
+  //     setTimeout(() => setIsSubscribed(false), 3000);
+  //   }
+  // };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -47,7 +46,7 @@ const Footer = () => {
 
       {/* Newsletter Section */}
       {/* <div className="bg-gradient-to-r from-yellow-600 to-yellow-700 py-8 relative">
-        <div className="container mx-auto px-4">
+        <div className="max-w-11/12  mx-auto px-4">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-2">Stay Updated with Latest Trends!</h3>
             <p className="text-yellow-100 mb-6">Subscribe to get exclusive offers and be the first to know about new products</p>
@@ -74,13 +73,13 @@ const Footer = () => {
         </div>
       </div> */}
 
-      <div className="container mx-auto px-4 py-12 relative z-10">
+      <div className="max-w-11/12  mx-auto px-4 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* About Section */}
           <div className="space-y-6">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-lg flex items-center justify-center text-white font-bold -lg">
+                <div className="w-10 h-10 bg-gradient-to-br bg-yellow-500 rounded-lg flex items-center justify-center text-white font-bold -lg">
                   U
                 </div>
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
@@ -88,10 +87,10 @@ const Footer = () => {
                 </h3>
               </div>
               <p className="text-gray-300 leading-relaxed mb-4">
-                We offer high-quality yet budget-friendly products with excellent customer service. 
+                We offer high-quality yet budget-friendly products with excellent customer service.
                 Your satisfaction is our top priority as we bring you the latest trends worldwide.
               </p>
-              
+
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center p-3 bg-gray-800 rounded-lg">
@@ -133,7 +132,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-6 relative">
               Quick Links
-              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-yellow-500 to-yellow-700 rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r bg-yellow-500 rounded-full"></span>
             </h3>
             <ul className="space-y-3">
               {[
@@ -207,7 +206,7 @@ const Footer = () => {
                 <Map className="mr-3 mt-1 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" size={18} />
                 <div>
                   <span className="block hover:text-white transition-colors duration-300">
-                    123 Tech Street, Digital City, 10001
+                    KN 70 St, Kigali
                   </span>
                   <span className="text-xs text-gray-500">Worldwide Shipping Available</span>
                 </div>
@@ -216,7 +215,7 @@ const Footer = () => {
                 <Mail className="mr-3 mt-1 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" size={18} />
                 <div>
                   <a href="mailto:support@Umukamezi.com" className="hover:text-white transition-colors duration-300">
-                    support@Umukamezi.com
+                    support@umukamezi.com
                   </a>
                   <span className="block text-xs text-gray-500">Quick Response Guaranteed</span>
                 </div>
@@ -225,7 +224,7 @@ const Footer = () => {
                 <Phone className="mr-3 mt-1 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" size={18} />
                 <div>
                   <a href="tel:+15551234567" className="hover:text-white transition-colors duration-300">
-                    +1 (555) 123-4567
+                    +250 781 691 713
                   </a>
                   <span className="block text-xs text-gray-500">Mon-Sun: 24/7 Available</span>
                 </div>
@@ -289,10 +288,10 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} Umukamezi. All rights reserved.
             </p>
             <p className="text-gray-500 text-xs mt-1">
-              Made with <Heart className="inline w-3 h-3 text-red-500 mx-1" /> for our customers worldwide
+              Made by <a className='text-orange-500' href='https://www.nexventures.net'>Nexventures Ltd</a>
             </p>
           </div>
-          
+
           {/* Rating */}
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <div className="flex items-center space-x-1">
@@ -306,7 +305,7 @@ const Footer = () => {
           {/* Back to Top Button */}
           <button
             onClick={scrollToTop}
-            className="bg-gradient-to-r from-yellow-500 to-yellow-700 text-white p-3 rounded-full hover:from-yellow-600 hover:to-yellow-800 transition-all duration-300 transform hover:scale-110 -lg hover:-xl"
+            className="bg-gradient-to-r bg-yellow-500 text-white p-3 rounded-full hover:from-yellow-600 hover:to-yellow-800 transition-all duration-300 transform hover:scale-110 -lg hover:-xl"
           >
             <ArrowUp size={20} />
           </button>

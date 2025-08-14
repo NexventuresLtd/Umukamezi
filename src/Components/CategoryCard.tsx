@@ -46,7 +46,7 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
       <div className="relative h-48 overflow-hidden">
         {!imageLoaded && (
           <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse flex items-center justify-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+            <div className="w-16 h-16 bg-gradient-to-br bg-yellow-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
               {category.name.charAt(0)}
             </div>
           </div>
@@ -105,7 +105,7 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
         {/* Progress Bar */}
         <div className="w-full bg-gray-200 rounded-full h-1.5 mb-3 overflow-hidden">
           <div 
-            className="bg-gradient-to-r from-yellow-500 to-yellow-700 h-1.5 rounded-full transition-all duration-1000 ease-out"
+            className="bg-gradient-to-r bg-yellow-500 h-1.5 rounded-full transition-all duration-1000 ease-out"
             style={{ 
               width: isHovered ? `${Math.min((category.count / 50) * 100, 100)}%` : '0%' 
             }}

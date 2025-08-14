@@ -94,7 +94,7 @@ function ProductCategory() {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center">
-          <div className="container mx-auto px-6 text-center">
+          <div className="max-w-11/12  mx-auto px-6 text-center">
             <h1 className="text-4xl font-bold text-white mb-4">{currentCategory.title}</h1>
             <p className="text-xl text-white max-w-2xl mx-auto">{currentCategory.description}</p>
           </div>
@@ -102,7 +102,7 @@ function ProductCategory() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-8">
+      <div className="max-w-11/12  mx-auto px-6 py-8">
         {/* Filters and Sorting */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
           <div className="flex items-center">

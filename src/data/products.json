@@ -7,7 +7,7 @@
     "category": "Tablets",
     "rating": 4.5,
     "reviews": 124,
-    "image": "tablet-pro.jpg",
+    "image": "https://bigbox.rw/wp-content/uploads/2025/05/457.jpg",
     "stock": 50,
     "colors": ["Space Gray", "Silver", "Rose Gold"],
     "features": [
@@ -27,7 +27,7 @@
     "category": "Computers",
     "rating": 4.8,
     "reviews": 89,
-    "image": "gaming-laptop.jpg",
+    "image": "https://t4.ftcdn.net/jpg/07/41/01/41/360_F_741014161_o9PTiiWFB2gWrLPiflaQOxB0n6OxcJPB.jpg",
     "stock": 25,
     "colors": ["Black", "RGB"],
     "features": [
@@ -47,7 +47,7 @@
     "category": "Cameras",
     "rating": 4.7,
     "reviews": 156,
-    "image": "dslr-camera.jpg",
+    "image": "https://images-cdn.ubuy.co.in/634efc498946176f4c2688fa-canon-eos-rebel-t7-digital-slr-camera.jpg",
     "stock": 30,
     "features": [
       "24.2MP APS-C sensor",
@@ -66,7 +66,7 @@
     "category": "Pro Audio",
     "rating": 4.3,
     "reviews": 210,
-    "image": "headphones.jpg",
+    "image": "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGYtczczLXBhaS0xNjMtbW9ja3VwLmpwZw.jpg",
     "stock": 75,
     "colors": ["Black", "gray", "White"],
     "features": [
@@ -86,7 +86,7 @@
     "category": "Pro Games",
     "rating": 4.9,
     "reviews": 312,
-    "image": "gaming-console.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/PS4-Console-wDS4.jpg/1280px-PS4-Console-wDS4.jpg",
     "stock": 40,
     "features": [
       "4K Ultra HD gaming",
@@ -105,7 +105,7 @@
     "category": "Lightings",
     "rating": 4.2,
     "reviews": 78,
-    "image": "led-lights.jpg",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2021/09/leds-in-studio.jpg",
     "stock": 100,
     "features": [
       "16 million colors",
@@ -124,7 +124,7 @@
     "category": "Phones",
     "rating": 4.6,
     "reviews": 245,
-    "image": "smartphone.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Android_Smartphones.jpg",
     "stock": 60,
     "colors": ["Midnight Black", "Ocean gray", "Pearl White"],
     "features": [
@@ -144,7 +144,7 @@
     "category": "Accessories",
     "rating": 4.4,
     "reviews": 167,
-    "image": "smartwatch.jpg",
+    "image": "https://t4.ftcdn.net/jpg/02/44/17/39/360_F_244173933_QPbn77c2Tjy5A4XoOJWqxysJibBpDy3T.jpg",
     "stock": 85,
     "colors": ["Black", "Silver", "Rose Gold"],
     "features": [

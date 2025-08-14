@@ -1,45 +1,24 @@
 import { useState, useEffect } from 'react';
-import { 
-  Users, 
-  Globe, 
-  ShoppingBag, 
+import {
+  Users,
+  Globe,
+  ShoppingBag,
   Headphones,
   Award,
   Shield,
   Truck,
   Heart,
-  Star,
-  TrendingUp,
+
   Clock,
   Target,
   Zap,
-  ChevronRight,
-  Home,
-  Quote,
-  ArrowRight
+
+  Camera,
+
 } from 'lucide-react';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
-
-// Enhanced Breadcrumb Component
-const Breadcrumb = () => {
-  return (
-    <nav className="flex items-center text-sm mb-8 bg-gradient-to-r from-gray-50 to-yellow-50 px-6 py-4 rounded-2xl border border-gray-200 -sm">
-      <div className="flex items-center space-x-2">
-        <a 
-          href="/" 
-          className="flex items-center text-gray-500 hover:text-yellow-600 transition-all duration-300 transform hover:scale-110"
-        >
-          <Home size={16} className="hover:text-yellow-600" />
-        </a>
-        <ChevronRight size={14} className="text-gray-400 mx-2" />
-        <span className="text-gray-900 font-semibold bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text px-3 py-1 rounded-md bg-white -sm border border-yellow-200">
-          About Us
-        </span>
-      </div>
-    </nav>
-  );
-};
+import AboutUsHero from './HeroAboutus';
 
 const About = () => {
   const [countUp, setCountUp] = useState({
@@ -50,6 +29,23 @@ const About = () => {
   });
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  console.log(currentImageIndex)
+  // Camera showcase images
+  const cameraImages = [
+    "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  ];
+
+  // Auto-rotate camera images
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex(prev => (prev + 1) % cameraImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Counter animation effect
   useEffect(() => {
@@ -62,10 +58,10 @@ const About = () => {
       };
 
       Object.keys(targets).forEach(key => {
-        const target = targets[key];
+        const target = targets[key as keyof typeof targets];
         const increment = target / 100;
         let current = 0;
-        
+
         const timer = setInterval(() => {
           current += increment;
           if (current >= target) {
@@ -106,306 +102,248 @@ const About = () => {
   const features = [
     {
       icon: Shield,
-      title: "Norton Verified Security",
-      description: "All transactions protected with highest security standards"
+      title: "Secure Transactions",
+      description: "All purchases protected with industry-leading security"
     },
     {
       icon: Truck,
-      title: "Worldwide Shipping",
-      description: "Free shipping to 100+ countries with tracking"
+      title: "Global Shipping",
+      description: "Reliable delivery to over 100 countries"
     },
     {
       icon: Headphones,
-      title: "24/7 Premium Support",
-      description: "Round-the-clock assistance via email, chat, or phone"
+      title: "Dedicated Support",
+      description: "24/7 assistance from our expert team"
     },
     {
       icon: Award,
-      title: "Low Price Guarantee",
-      description: "Best prices guaranteed or we'll match any competitor"
+      title: "Price Guarantee",
+      description: "Best prices with competitor matching"
     }
   ];
 
   const values = [
     {
       icon: Target,
-      title: "Customer First",
-      description: "Your satisfaction is our top priority in everything we do"
+      title: "Customer Focus",
+      description: "Your satisfaction drives every decision we make"
     },
     {
       icon: Zap,
       title: "Innovation",
-      description: "We stay ahead of trends to bring you the latest products"
+      description: "Continuously bringing you cutting-edge technology"
     },
     {
       icon: Heart,
       title: "Quality",
-      description: "Every product is carefully selected for quality and value"
+      description: "Rigorous standards for every product we offer"
     },
     {
       icon: Globe,
-      title: "Global Reach",
-      description: "Serving customers worldwide with local care"
+      title: "Global Service",
+      description: "Worldwide reach with local expertise"
     }
   ];
 
   return (
-   <div>
-    <Header />
-   <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-yellow-50">
-      <div className="container mx-auto px-4 py-12">
-        <Breadcrumb />
-
-        {/* Hero Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
-                About Umukamezi
-              </span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Your premier destination for high-quality, budget-friendly products with exceptional customer service
-            </p>
-          </div>
-        </div>
-
-        {/* Main Content */}
-        <div className="bg-white rounded-3xl -2xl overflow-hidden mb-16 transform hover:-3xl transition-all duration-500">
-          <div className="lg:flex">
-            {/* Image Section */}
-            <div className="lg:w-1/2 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-transparent z-10"></div>
-              <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Umukamezi Team"
-                className="w-full h-full object-cover min-h-[400px] lg:min-h-[600px] transform hover:scale-105 transition-transform duration-700"
-              />
-              
-              {/* Floating Stats */}
-              <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 -lg">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
-                    <Star className="text-white" size={20} />
-                  </div>
-                  <div>
-                    <div className="font-bold text-lg">4.9★</div>
-                    <div className="text-xs text-gray-600">Customer Rating</div>
-                  </div>
-                </div>
+    <div>
+      <Header fixedD={true} />
+      <AboutUsHero />
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+        <div className="max-w-11/12 mx-auto px-4 py-10">
+          {/* Main Content */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-16">
+            <div className="lg:flex">
+              {/* Image Section */}
+              <div className="lg:w-1/2 relative overflow-hidden max-h-[680px]">
+                <img
+                  src="kad.jpeg"
+                  alt="Our Team"
+                  className="w-full object-cover h-full hover:scale-150 cursor-pointer"
+                />
               </div>
-              
-              <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 -lg">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-                    <TrendingUp className="text-white" size={20} />
-                  </div>
+
+              {/* Content Section */}
+              <div className="lg:w-1/2 p-8 lg:p-12">
+                <div className="space-y-6">
                   <div>
-                    <div className="font-bold text-lg">Growing</div>
-                    <div className="text-xs text-gray-600">Since 2020</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                    <h2 className="text-2xl font-bold text-yellow-600 mb-6">
+                      Our Story
+                    </h2>
 
-            {/* Content Section */}
-            <div className="lg:w-1/2 p-8 lg:p-12">
-              <div className="space-y-6">
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6 relative">
-                    Our Story
-                    <span className="absolute -bottom-2 left-0 w-16 h-1 bg-gradient-to-r from-yellow-500 to-yellow-700 rounded-full"></span>
-                  </h2>
-                  
-                  <div className="space-y-4 text-gray-600 leading-relaxed">
-                    <p className="relative pl-6">
-                      <Quote className="absolute left-0 top-0 text-yellow-300" size={20} />
-                      Welcome to Umukamezi, your premier destination for the latest and greatest products. 
-                      We've come a long way since our inception, and now we know exactly which direction 
-                      to take when supplying you with high-quality yet budget-friendly products.
-                    </p>
-                    
-                    <p>
-                      We offer all of this while providing excellent customer service and friendly support. 
-                      We always keep an eye on the latest trends and put our customers' wishes first. 
-                      That is why we have satisfied customers all over the world.
-                    </p>
-                    
-                    <p>
-                      The interests of our customers are always top priority for us, so we hope you will 
-                      enjoy our products as much as we enjoy making them available to you.
-                    </p>
-                  </div>
-                </div>
+                    <div className="space-y-4 text-gray-600 leading-relaxed">
+                      <p>
+                        Founded in 2020, we are passionate about photography and dedicated to providing
+                        professionals and enthusiasts with the best equipment. Our carefully curated
+                        selection combines quality, performance, and value.
+                      </p>
 
-                {/* Our Promise Section */}
-                <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl border border-yellow-200">
-                  <h3 className="text-2xl font-bold mb-6 text-yellow-800 flex items-center">
-                    <Award className="mr-3 text-yellow-600" size={28} />
-                    Our Promise to You
-                  </h3>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {features.map((feature, index) => (
-                      <div
-                        key={index}
-                        className={`flex items-start p-4 rounded-xl transition-all duration-300 cursor-pointer ${
-                          activeFeature === index 
-                            ? 'bg-white -lg transform scale-105' 
-                            : 'bg-white/50 hover:bg-white hover:-md'
-                        }`}
-                        onClick={() => setActiveFeature(index)}
-                      >
-                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center mr-4 transition-colors duration-300 ${
-                          activeFeature === index 
-                            ? 'bg-yellow-500 text-white' 
-                            : 'bg-yellow-200 text-yellow-600'
-                        }`}>
-                          <feature.icon size={20} />
+                      <p>
+                        Our team of photography experts understands the creative process and technical
+                        requirements at every level. We're committed to helping you find exactly what
+                        you need to realize your vision.
+                      </p>
+
+                      <p>
+                        From beginner kits to professional setups, we offer guidance, competitive
+                        pricing, and exceptional service to support your photographic journey.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Our Promise Section */}
+                  <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 className="text-xl font-bold mb-6 text-yellow-600 flex items-center">
+                      <Award className="mr-3 text-gray-700" size={20} />
+                      Our Commitment
+                    </h3>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {features.map((feature, index) => (
+                        <div
+                          key={index}
+                          className={`flex items-start p-3 rounded-lg transition-all duration-300 ${activeFeature === index
+                            ? 'bg-white'
+                            : 'bg-gray-50 hover:bg-white'
+                            }`}
+                          onClick={() => setActiveFeature(index)}
+                        >
+                          <div className={`w-8 h-8 rounded-md flex items-center justify-center mr-3 ${activeFeature === index
+                            ? 'bg-yellow-600 text-white'
+                            : 'bg-gray-200 text-gray-700'
+                            }`}>
+                            <feature.icon size={16} />
+                          </div>
+                          <div>
+                            <h4 className="font-medium text-yellow-600 mb-1">{feature.title}</h4>
+                            <p className="text-sm text-gray-600">{feature.description}</p>
+                          </div>
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900 mb-1">{feature.title}</h4>
-                          <p className="text-sm text-gray-600">{feature.description}</p>
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Stats Section */}
-        <div id="stats-section" className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Impact in Numbers
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Growing stronger every day with our amazing community
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { 
-                icon: Users, 
-                value: countUp.customers, 
-                suffix: '+', 
-                label: 'Happy Customers',
-                color: 'from-blue-500 to-blue-600',
-                bgColor: 'bg-blue-50',
-                description: 'Worldwide satisfaction'
-              },
-              { 
-                icon: Globe, 
-                value: countUp.countries, 
-                suffix: '+', 
-                label: 'Countries Served',
-                color: 'from-green-500 to-green-600',
-                bgColor: 'bg-green-50',
-                description: 'Global presence'
-              },
-              { 
-                icon: ShoppingBag, 
-                value: countUp.products, 
-                suffix: '+', 
-                label: 'Quality Products',
-                color: 'from-purple-500 to-purple-600',
-                bgColor: 'bg-purple-50',
-                description: 'Curated selection'
-              },
-              { 
-                icon: Clock, 
-                value: countUp.support, 
-                suffix: '/7', 
-                label: 'Customer Support',
-                color: 'from-yellow-500 to-yellow-600',
-                bgColor: 'bg-yellow-50',
-                description: 'Always available'
-              }
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className={`${stat.bgColor} p-8 rounded-2xl -lg hover:-xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer group`}
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon className="text-white" size={32} />
-                </div>
-                <div className="text-center">
-                  <div className={`text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
-                    {stat.value.toLocaleString()}{stat.suffix}
-                  </div>
-                  <div className="text-gray-800 font-semibold mb-1">{stat.label}</div>
-                  <div className="text-gray-600 text-sm">{stat.description}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Values Section */}
-        <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white rounded-3xl p-12 mb-16 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-40 h-40 bg-yellow-500 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-500 rounded-full blur-3xl"></div>
-          </div>
-          
-          <div className="relative z-10">
+          {/* Stats Section */}
+          <div id="stats-section" className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">Our Core Values</h2>
-              <p className="text-gray-300 text-lg">
-                The principles that guide everything we do
+              <h2 className="text-3xl font-bold text-yellow-600 mb-4">
+                Our Global Reach
+              </h2>
+              <p className="text-gray-600">
+                Trusted by photographers worldwide
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                {
+                  icon: Users,
+                  value: countUp.customers,
+                  suffix: '+',
+                  label: 'Customers',
+                  color: 'text-yellow-600',
+                  bgColor: 'bg-white',
+                  description: 'Satisfied clients globally'
+                },
+                {
+                  icon: Globe,
+                  value: countUp.countries,
+                  suffix: '+',
+                  label: 'Countries',
+                  color: 'text-yellow-600',
+                  bgColor: 'bg-white',
+                  description: 'International presence'
+                },
+                {
+                  icon: ShoppingBag,
+                  value: countUp.products,
+                  suffix: '+',
+                  label: 'Products',
+                  color: 'text-yellow-600',
+                  bgColor: 'bg-white',
+                  description: 'Curated selection'
+                },
+                {
+                  icon: Clock,
+                  value: countUp.support,
+                  suffix: '/7',
+                  label: 'Support',
+                  color: 'text-yellow-600',
+                  bgColor: 'bg-white',
+                  description: 'Always available'
+                }
+              ].map((stat, index) => (
+                <div
+                  key={index}
+                  className={`${stat.bgColor} p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300`}
+                >
+                  <div className={`w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                    <stat.icon className="text-yellow-600" size={24} />
+                  </div>
+                  <div className="text-center">
+                    <div className={`text-3xl font-bold ${stat.color} mb-2`}>
+                      {stat.value.toLocaleString()}{stat.suffix}
+                    </div>
+                    <div className="text-yellow-500 font-medium mb-1">{stat.label}</div>
+                    <div className="text-gray-600 text-sm">{stat.description}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+
+
+          {/* Values Section */}
+          <div className="bg-gray-50 rounded-xl p-8 lg:p-12 mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Our Values</h2>
+              <p className="text-gray-600">
+                The foundation of everything we do
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {values.map((value, index) => (
                 <div
                   key={index}
-                  className="text-center group cursor-pointer"
+                  className="text-center"
                 >
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 -lg">
-                    <value.icon size={32} className="text-white" />
+                  <div className="w-16 h-16 mx-auto mb-4 bg-yellow-500 rounded-lg flex items-center justify-center">
+                    <value.icon size={24} className="text-gray-600" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-white group-hover:text-yellow-300 transition-colors duration-300">
+                  <h3 className="text-lg font-bold mb-3 text-gray-600">
                     {value.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 text-sm">
                     {value.description}
                   </p>
                 </div>
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-yellow-500 to-yellow-700 text-white p-12 rounded-3xl -2xl">
-          <h2 className="text-4xl font-bold mb-4">Ready to Experience the Difference?</h2>
-          <p className="text-xl text-yellow-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust Umukamezi for their shopping needs
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => window.location.href = '/products'}
-              className="bg-white text-yellow-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 -lg flex items-center justify-center"
-            >
-              <ShoppingBag className="mr-2" size={20} />
-              Start Shopping
-              <ArrowRight className="ml-2" size={20} />
-            </button>
-            <button
-              onClick={() => window.location.href = '/contact'}
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-yellow-600 transition-all duration-300 transform hover:scale-105"
-            >
-              Contact Us
-            </button>
+          {/* Call to Action */}
+          <div className="text-center bg-yellow-600 text-white p-8 lg:p-12 rounded-xl">
+            <h2 className="text-3xl font-bold mb-4">Start Your Photography Journey</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join our community of photographers and discover the perfect equipment for your needs
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-yellow-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Camera className="mr-2" size={18} />
+                Browse Collection
+              </button>
+              <button className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-yellow-600 transition-all duration-300">
+                Contact Our Experts
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <Footer />
+        <Footer />
       </div>
     </div>
   );

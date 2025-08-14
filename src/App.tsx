@@ -18,6 +18,7 @@ import AdminOrders from './Pages/dashboard/Admin/Orders';
 import AdminUsers from './Pages/dashboard/Admin/Users';
 import AdminAnalytics from './Pages/dashboard/Admin/Analytics';
 import NotFound from './Pages/NotFound';
+import WishlistCartManager from './Pages/CartWish';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/cart-wish" element={<WishlistCartManager />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/faq" element={<FAQ />} />
